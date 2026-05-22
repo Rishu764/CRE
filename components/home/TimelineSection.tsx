@@ -128,7 +128,6 @@ export default function TimelineSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const active = timelineData[activeIndex];
 
   const goToNext = useCallback(() => {
     setActiveIndex((prev) => (prev < timelineData.length - 1 ? prev + 1 : 0));
@@ -214,13 +213,13 @@ export default function TimelineSection() {
       {/* Main Content - Sliding */}
       <div className="relative z-10 overflow-hidden flex-1 flex items-center">
         <div
-          className="flex transition-transform duration-700 ease-in-out"
+          className="flex transition-transform duration-700 ease-in-out w-full"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {timelineData.map((item) => (
             <div
               key={item.year}
-              className="w-full shrink-0 max-w-full relative overflow-hidden min-h-[calc(100vh-56px)]"
+              className="w-full shrink-0 relative overflow-hidden"
             >
               {/* Per-slide background image */}
               {"bgImage" in item && item.bgImage && (
@@ -230,38 +229,39 @@ export default function TimelineSection() {
                     src={item.bgImage}
                     alt=""
                     className="absolute inset-0 w-full h-full object-cover opacity-20"
-                    style={{ objectPosition: "center center" }}
                   />
                   <div className="absolute inset-0 bg-black/50" />
                 </>
               )}
-              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 flex items-center min-h-[calc(100vh-56px)]">
-                <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+
+              {/* Slide Content */}
+              <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 flex items-center min-h-[calc(100vh-56px)]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full">
                   {/* Left - Text Content */}
-                  <div className="space-y-6">
-                    <h2 className="text-4xl lg:text-5xl font-black uppercase tracking-tight">
+                  <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
+                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight">
                       <span className="text-white">Our </span>
                       <span className="text-[#e9c46a]">Journey</span>
                     </h2>
 
-                    <div className="space-y-4">
-                      <div className="text-5xl lg:text-6xl font-bold text-white/90">
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white/90">
                         {item.year}
                       </div>
-                      <h3 className="text-xl lg:text-2xl font-semibold text-[#52b788]">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-[#52b788]">
                         {item.title}
                       </h3>
-                      <p className="text-white/70 leading-relaxed text-sm lg:text-base max-w-xl">
+                      <p className="text-white/70 leading-relaxed text-sm sm:text-base max-w-xl">
                         {item.description}
                       </p>
                     </div>
                   </div>
 
-                  {/* Right - Person Image (no card, clean like BJP style) */}
-                  <div className="flex flex-col items-center lg:items-end">
+                  {/* Right - Person Image */}
+                  <div className="flex flex-col items-center order-1 lg:order-2">
                     <div className="relative">
-                      {/* Large photo with fade effect */}
-                      <div className="w-56 h-56 lg:w-72 lg:h-72 rounded-full overflow-hidden ring-2 ring-white/20 shadow-2xl">
+                      {/* Photo */}
+                      <div className="w-32 h-32 sm:w-44 sm:h-44 lg:w-64 lg:h-64 rounded-full overflow-hidden ring-2 ring-white/20 shadow-2xl">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={item.image}
@@ -269,12 +269,14 @@ export default function TimelineSection() {
                           className="w-full h-full object-cover object-top"
                         />
                       </div>
-                      {/* Name caption below */}
-                      <div className="text-center mt-6">
-                        <h4 className="text-lg font-bold text-white">
+                      {/* Name caption */}
+                      <div className="text-center mt-4 sm:mt-6">
+                        <h4 className="text-base sm:text-lg font-bold text-white">
                           {item.person}
                         </h4>
-                        <p className="text-sm text-[#e9c46a]">{item.role}</p>
+                        <p className="text-xs sm:text-sm text-[#e9c46a]">
+                          {item.role}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -285,7 +287,7 @@ export default function TimelineSection() {
         </div>
       </div>
 
-      {/* Bottom Year Navigation Bar - BJP Style Slider */}
+      {/* Bottom Year Navigation Bar */}
       <div className="relative z-10 bg-black/60 backdrop-blur-sm border-t border-white/5">
         <div className="flex items-stretch">
           {/* Scrollable Years */}
@@ -298,16 +300,16 @@ export default function TimelineSection() {
               <button
                 key={item.year}
                 onClick={() => handleManualSelect(index)}
-                className={`relative px-5 lg:px-7 py-4 text-sm font-medium whitespace-nowrap transition-all shrink-0 border-r border-white/5 ${
+                className={`relative px-3 sm:px-5 lg:px-7 py-3 sm:py-4 text-xs sm:text-sm font-medium whitespace-nowrap transition-all shrink-0 border-r border-white/5 ${
                   index === activeIndex
                     ? "text-white bg-white/5"
                     : "text-white/50 hover:text-white/80 hover:bg-white/5"
                 }`}
               >
                 {item.year}
-                {/* Active indicator - red underline */}
+                {/* Active indicator */}
                 {index === activeIndex && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-[3px] bg-[#e63946] rounded-t-sm" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 sm:w-8 h-[3px] bg-[#e63946] rounded-t-sm" />
                 )}
               </button>
             ))}
@@ -317,17 +319,17 @@ export default function TimelineSection() {
           <div className="flex items-center gap-0 border-l border-white/10 shrink-0">
             <button
               onClick={handlePrev}
-              className="px-3 py-4 text-white/60 hover:text-white hover:bg-white/10 transition-colors h-full"
+              className="px-2 sm:px-3 py-3 sm:py-4 text-white/60 hover:text-white hover:bg-white/10 transition-colors h-full"
               aria-label="Previous year"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button
               onClick={handleNext}
-              className="px-3 py-4 text-white/60 hover:text-white hover:bg-white/10 transition-colors h-full border-l border-white/10"
+              className="px-2 sm:px-3 py-3 sm:py-4 text-white/60 hover:text-white hover:bg-white/10 transition-colors h-full border-l border-white/10"
               aria-label="Next year"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>
