@@ -1,0 +1,106 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X, Leaf } from "lucide-react";
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/key-issues", label: "Key Issues" },
+  { href: "/our-work", label: "Our Work" },
+  { href: "/leadership", label: "Leadership" },
+  { href: "/publications", label: "Publications" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/contact", label: "Contact" },
+];
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary-dark transition-colors">
+              <Leaf className="w-5 h-5 text-white" />
+            </div>
+            <div className="hidden sm:block">
+              <span className="text-lg font-bold text-[#1b4332] tracking-tight">
+                CRE
+              </span>
+              <span className="hidden md:block text-[10px] text-gray-500 leading-tight">
+                Centre for Resource Management & Environment
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary rounded-lg hover:bg-primary/5 transition-all"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <div className="hidden lg:block">
+            <Link
+              href="/contact"
+              className="px-5 py-2.5 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary-dark transition-colors shadow-md hover:shadow-lg"
+            >
+              Get Involved
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <X className="w-6 h-6 text-gray-800" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-800" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden bg-white border-t border-muted-dark">
+          <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block px-4 py-3 text-sm font-medium text-gray-700 hover:text-primary hover:bg-primary/5 rounded-lg transition-all"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <div className="pt-3 border-t border-muted-dark">
+              <Link
+                href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="block text-center px-5 py-3 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary-dark transition-colors"
+              >
+                Get Involved
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}
