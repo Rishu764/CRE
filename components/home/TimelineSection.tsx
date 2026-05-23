@@ -39,7 +39,7 @@ const timelineData = [
       "Organized Van Mahotsav at Udaipur, Tripura. Created a self-help group for wildlife conservation awareness and handicraft improvement through Bamboo treatment. Artisans trained were later engaged by Tripura Forest Corporation for making Bamboo furniture, now earning good income.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2015",
@@ -48,7 +48,7 @@ const timelineData = [
       "Formed 'Jan Vikas Manch' (JVM) — a confederation of voluntary agencies. Took up issues of forest fires with the National Green Tribunal. NGT took immediate action and directed Centre and State governments to implement suggestions. Regular articles began in The Pioneer newspaper.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2017",
@@ -57,7 +57,7 @@ const timelineData = [
       "Helped create a Ganoderma fungus medicinal lab inaugurated by Uttarakhand Agriculture Minister Mr. Subodh Uniyal on 28th May 2017. Organized mushroom cultivation training for women SHGs at Aamwala village. Women now earn ₹5,000-6,000 monthly from mushroom cultivation.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2018",
@@ -66,7 +66,7 @@ const timelineData = [
       "Appointed as Member of the Indian Council of Forestry Research and Education (ICFRE) Society — the apex policy making body headed by the Minister of Environment. ₹18 lakh ONGC CSR project sanctioned for mushroom cultivation at Sahaspur village.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman & ICFRE Member",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2019",
@@ -75,7 +75,7 @@ const timelineData = [
       "Appointed by the President of India as his nominee in the Executive Council and University Court of Central University of Kashmir. Emphasized importance of forest ecosystem stability and suggested All India Coordinated Project on Climate Change funded by CAMPA.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman & President's Nominee",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2020",
@@ -84,7 +84,7 @@ const timelineData = [
       "Visited tribal districts of Madhya Pradesh to assess Forest Rights Act implementation. Met Baiga tribals at Daguna village, Dindori District. Guided social workers on community forest management. CCF Jabalpur agreed to develop model scheme for Tendu patta management by community.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2021",
@@ -93,7 +93,7 @@ const timelineData = [
       "Visited Jivamrit Organic Farmers Producers Company. Met Agriculture Minister for relaxing sugar cane factory norms — government allowed relaxation benefiting farmers. Took up recognition of Sujok Therapy with Uttarakhand government for patients with no allopathy remedy.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2022",
@@ -102,7 +102,7 @@ const timelineData = [
       "Appointed as Member of the Working Group by National Commission on Scheduled Tribes, Ministry of Tribal Affairs. Published book 'Quest for Civility — An Insight into Indian Babudom' through Notion Press, well received nationally.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman & NCST Member",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2023",
@@ -111,7 +111,7 @@ const timelineData = [
       "Visited Mysore as member of fact-finding team to assess Forest Rights Act 2006 implementation in Karnataka. Invited as Chief Guest at Amity University. Chaired session on 'Climate Change and Disasters' at Uttarakhand Administrative Academy, Nainital.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
   {
     year: "2024",
@@ -120,7 +120,7 @@ const timelineData = [
       "Organized International Workshop on 'Combating Climate Change in South Asia and East Africa' at IGNFA Dehradun. 72 participants from India, Mauritius, Nepal, Sri Lanka, Australia and Belgium. Recommended South-South cooperation and climate-resilient development.",
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
-    image: "/author.jpg",
+    image: "/author02.png",
   },
 ];
 
@@ -266,7 +266,7 @@ export default function TimelineSection() {
                         <img
                           src={item.image}
                           alt={item.person}
-                          className="w-full h-full object-cover object-top"
+                          className="w-full h-full object-cover object-[center_25%]"
                         />
                       </div>
                       {/* Name caption */}
