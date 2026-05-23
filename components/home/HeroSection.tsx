@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { ArrowDown, TreePine, Users, Globe } from "lucide-react";
+import { ArrowDown, TreePine, Users, Globe, BookOpen } from "lucide-react";
 import Link from "next/link";
 
 const heroSlides = [
@@ -17,7 +17,7 @@ const heroSlides = [
   },
   {
     id: 2,
-    bgImage: "/trible.png",
+    bgImage: "/trible02.png",
     badge: "Tribal Empowerment • Since 2011",
     title: "Empowering",
     titleHighlight: "235+ Tribal",
@@ -27,7 +27,7 @@ const heroSlides = [
   },
   {
     id: 3,
-    bgImage: "/hero-bg.jpg",
+    bgImage: "/meeting.png",
     badge: "Climate Action • Global Impact",
     title: "Combating",
     titleHighlight: "Climate Change",
@@ -37,7 +37,7 @@ const heroSlides = [
   },
   {
     id: 4,
-    bgImage: "/trible.png",
+    bgImage: "/meeting02.png",
     badge: "Forest Conservation • National Reach",
     title: "Protecting",
     titleHighlight: "India's Forests",
@@ -68,7 +68,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex flex-col overflow-hidden">
       {/* Sliding Background Images */}
       <div className="absolute inset-0">
         {heroSlides.map((slide, index) => (
@@ -84,24 +84,24 @@ export default function HeroSection() {
               alt=""
               className="w-full h-full object-cover"
             />
-            {/* Dark overlay for readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40" />
+            {/* Lighter overlay - only on left side for text */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
           </div>
         ))}
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content - Animated */}
-          <div className="text-white space-y-8">
+      {/* Main Content - Centered vertically */}
+      <div className="relative z-10 flex-1 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 w-full">
+          {/* Left Content Only - No grid, full width text on left */}
+          <div className="text-white max-w-2xl">
             {heroSlides.map((slide, index) => (
               <div
                 key={slide.id}
                 className={`transition-all duration-700 ${
                   index === activeIndex
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 absolute -translate-x-8"
+                    ? "opacity-100 translate-x-0 relative"
+                    : "opacity-0 absolute -translate-x-8 pointer-events-none"
                 }`}
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8">
@@ -141,96 +141,64 @@ export default function HeroSection() {
             ))}
           </div>
 
-          {/* Right - Stats Cards */}
-          <div className="hidden lg:grid grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <StatCard
-                icon={<TreePine className="w-6 h-6" />}
-                number="30+"
-                label="Years Combined Experience"
-                delay="delay-100"
+          {/* Dot Navigation - Centered */}
+          <div className="absolute bottom-28 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`transition-all ${
+                  index === activeIndex
+                    ? "w-10 h-3 bg-white rounded-full"
+                    : "w-3 h-3 bg-white/40 rounded-full hover:bg-white/60"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
               />
-              <StatCard
-                icon={<Users className="w-6 h-6" />}
-                number="235+"
-                label="Tribal Artisans Empowered"
-                delay="delay-300"
-              />
+            ))}
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="absolute bottom-16 left-1/2 -translate-x-1/2 animate-bounce">
+            <ArrowDown className="w-6 h-6 text-white/60" />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Stats Bar */}
+      <div className="relative z-10 bg-black/50 backdrop-blur-md border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
+            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <TreePine className="w-4 h-4 text-secondary-light" />
+                <span className="text-xl sm:text-2xl font-bold text-white">30+</span>
+              </div>
+              <p className="text-xs sm:text-sm text-white/60">Years Experience</p>
             </div>
-            <div className="space-y-4 mt-8">
-              <StatCard
-                icon={<Globe className="w-6 h-6" />}
-                number="10+"
-                label="States Across India"
-                delay="delay-200"
-              />
-              <StatCard
-                icon={
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
-                }
-                number="200+"
-                label="Research Publications"
-                delay="delay-400"
-              />
+            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Users className="w-4 h-4 text-secondary-light" />
+                <span className="text-xl sm:text-2xl font-bold text-white">235+</span>
+              </div>
+              <p className="text-xs sm:text-sm text-white/60">Artisans Empowered</p>
+            </div>
+            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <Globe className="w-4 h-4 text-secondary-light" />
+                <span className="text-xl sm:text-2xl font-bold text-white">10+</span>
+              </div>
+              <p className="text-xs sm:text-sm text-white/60">States Across India</p>
+            </div>
+            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                <BookOpen className="w-4 h-4 text-secondary-light" />
+                <span className="text-xl sm:text-2xl font-bold text-white">200+</span>
+              </div>
+              <p className="text-xs sm:text-sm text-white/60">Publications</p>
             </div>
           </div>
         </div>
-
-        {/* Dot Navigation */}
-        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`transition-all ${
-                index === activeIndex
-                  ? "w-10 h-3 bg-white rounded-full"
-                  : "w-3 h-3 bg-white/40 rounded-full hover:bg-white/60"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="w-6 h-6 text-white/60" />
-        </div>
       </div>
     </section>
-  );
-}
-
-function StatCard({
-  icon,
-  number,
-  label,
-  delay,
-}: {
-  icon: React.ReactNode;
-  number: string;
-  label: string;
-  delay: string;
-}) {
-  return (
-    <div
-      className={`bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 animate-fade-in-up ${delay}`}
-    >
-      <div className="text-secondary-light mb-3">{icon}</div>
-      <div className="text-3xl font-bold text-white mb-1">{number}</div>
-      <div className="text-sm text-white/70">{label}</div>
-    </div>
   );
 }

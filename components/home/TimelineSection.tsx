@@ -22,6 +22,7 @@ const timelineData = [
     person: "Mrs. Usha Bahuguna",
     role: "Chairperson",
     image: "/Mrs. Usha Bahuguna.jpg",
+    bgImage: "/trible02.png",
   },
   {
     year: "2013",
@@ -31,6 +32,7 @@ const timelineData = [
     person: "Mrs. Usha Bahuguna",
     role: "Chairperson",
     image: "/Mrs. Usha Bahuguna.jpg",
+    bgImage: "/hero-bg.jpg",
   },
   {
     year: "2014",
@@ -40,6 +42,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
     image: "/author02.png",
+    bgImage: "/trible.png",
   },
   {
     year: "2015",
@@ -49,6 +52,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
     image: "/author02.png",
+    bgImage: "/hero-bg.jpg",
   },
   {
     year: "2017",
@@ -58,6 +62,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
     image: "/author02.png",
+    bgImage: "/trible02.png",
   },
   {
     year: "2018",
@@ -67,6 +72,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman & ICFRE Member",
     image: "/author02.png",
+    bgImage: "/meeting.png",
   },
   {
     year: "2019",
@@ -76,6 +82,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman & President's Nominee",
     image: "/author02.png",
+    bgImage: "/meeting02.png",
   },
   {
     year: "2020",
@@ -85,6 +92,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
     image: "/author02.png",
+    bgImage: "/trible.png",
   },
   {
     year: "2021",
@@ -94,6 +102,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
     image: "/author02.png",
+    bgImage: "/hero-bg.jpg",
   },
   {
     year: "2022",
@@ -103,6 +112,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman & NCST Member",
     image: "/author02.png",
+    bgImage: "/meeting.png",
   },
   {
     year: "2023",
@@ -112,6 +122,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
     image: "/author02.png",
+    bgImage: "/meeting02.png",
   },
   {
     year: "2024",
@@ -121,6 +132,7 @@ const timelineData = [
     person: "Dr. V.K. Bahuguna",
     role: "Chairman",
     image: "/author02.png",
+    bgImage: "/meeting.png",
   },
 ];
 
