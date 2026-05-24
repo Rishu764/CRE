@@ -13,7 +13,7 @@ const heroSlides = [
     titleHighlight: "Management &",
     titleEnd: "Environment",
     description:
-      "Empowering communities, conserving forests, and building climate-resilient futures across India — from grassroots to global policy.",
+      "Promoting efficient, accountable governance through efficient resource management. Empowering communities for better governance of resources.",
   },
   {
     id: 2,
@@ -123,7 +123,7 @@ export default function HeroSection() {
                   {slide.description}
                 </p>
 
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mb-6">
                   <Link
                     href="/our-work"
                     className="px-8 py-3.5 bg-white text-primary-dark font-semibold rounded-full hover:bg-secondary-light hover:text-primary-dark transition-all shadow-lg hover:shadow-xl"
@@ -136,6 +136,29 @@ export default function HeroSection() {
                   >
                     Learn More
                   </Link>
+                </div>
+
+                {/* Trust Credentials */}
+                <div className="flex flex-wrap gap-2">
+                  <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white backdrop-blur-sm border border-white/20" style={{ background: "rgba(255,255,255,0.1)" }}>
+                    <span className="w-2 h-2 rounded-full" style={{ background: "#34d399" }} />
+                    Indian Trust Act, 1882
+                  </span>
+                  <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white backdrop-blur-sm border border-white/20" style={{ background: "rgba(255,255,255,0.1)" }}>
+                    <span className="w-2 h-2 rounded-full" style={{ background: "#fbbf24" }} />
+                    Sec. 12A Certified
+                  </span>
+                  <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white backdrop-blur-sm border border-white/20" style={{ background: "rgba(255,255,255,0.1)" }}>
+                    <span className="w-2 h-2 rounded-full" style={{ background: "#fbbf24" }} />
+                    80G Tax Exemption
+                  </span>
+                  <span
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold border"
+                    style={{ background: "rgba(82,183,136,0.2)", borderColor: "rgba(82,183,136,0.5)", color: "#6ee7b7" }}
+                  >
+                    <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#52b788" }} />
+                    Open to Funding
+                  </span>
                 </div>
               </div>
             ))}
@@ -170,31 +193,31 @@ export default function HeroSection() {
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
             <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
-                <TreePine className="w-4 h-4 text-secondary-light" />
+                <TreePine className="w-4 h-4" style={{ color: "#e9c46a" }} />
                 <span className="text-xl sm:text-2xl font-bold text-white">30+</span>
               </div>
-              <p className="text-xs sm:text-sm text-white/60">Years Experience</p>
+              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>Years Experience</p>
             </div>
             <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
-                <Users className="w-4 h-4 text-secondary-light" />
+                <Users className="w-4 h-4" style={{ color: "#e9c46a" }} />
                 <span className="text-xl sm:text-2xl font-bold text-white">500+</span>
               </div>
-              <p className="text-xs sm:text-sm text-white/60">Artisans Empowered</p>
+              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>Artisans Empowered</p>
             </div>
             <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
-                <Globe className="w-4 h-4 text-secondary-light" />
+                <Globe className="w-4 h-4" style={{ color: "#e9c46a" }} />
                 <span className="text-xl sm:text-2xl font-bold text-white">10+</span>
               </div>
-              <p className="text-xs sm:text-sm text-white/60">States Across India</p>
+              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>States Across India</p>
             </div>
             <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
-                <BookOpen className="w-4 h-4 text-secondary-light" />
+                <BookOpen className="w-4 h-4" style={{ color: "#e9c46a" }} />
                 <span className="text-xl sm:text-2xl font-bold text-white">200+</span>
               </div>
-              <p className="text-xs sm:text-sm text-white/60">Publications</p>
+              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>Publications</p>
             </div>
           </div>
         </div>
