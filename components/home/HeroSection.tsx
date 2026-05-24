@@ -178,7 +178,7 @@ export default function HeroSection() {
             <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
               <div className="flex items-center justify-center gap-2 mb-1">
                 <Users className="w-4 h-4 text-secondary-light" />
-                <span className="text-xl sm:text-2xl font-bold text-white">235+</span>
+                <span className="text-xl sm:text-2xl font-bold text-white">500+</span>
               </div>
               <p className="text-xs sm:text-sm text-white/60">Artisans Empowered</p>
             </div>

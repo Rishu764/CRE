@@ -7,65 +7,79 @@ import {
   Scale,
   Thermometer,
   Mountain,
+  Briefcase,
+  Globe2,
+  BookOpen,
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 
 const issues = [
   {
-    icon: TreePine,
-    title: "Environmental Conservation",
+    icon: BookOpen,
+    title: "Resource Management in Accountable Administration",
     description:
-      "Forest fire prevention, biodiversity conservation, water rejuvenation, and wildlife management across India.",
+      "Inforcing the concept of resource management within accountable governance frameworks to ensure sustainable and transparent use of natural and public resources.",
+    gradient: "from-violet-500 to-purple-600",
+    iconBg: "bg-violet-500/10",
+    iconColor: "text-violet-500",
+    borderHover: "hover:border-violet-400",
+    number: "01",
+  },
+  {
+    icon: TreePine,
+    title: "Environment Conservation & Climate Change",
+    description:
+      "Forest fire prevention, biodiversity conservation, water rejuvenation, wildlife management, and active mitigation of climate change across India.",
     gradient: "from-emerald-500 to-green-600",
     iconBg: "bg-emerald-500/10",
     iconColor: "text-emerald-500",
     borderHover: "hover:border-emerald-400",
-    number: "01",
+    number: "02",
   },
   {
     icon: Users,
     title: "Tribal & Rural Development",
     description:
-      "Empowering tribal artisans, forming self-help groups, promoting handicrafts, and implementing Forest Rights Act.",
+      "Empowering tribal artisans, forming self-help groups, promoting handicrafts, and implementing Forest Rights Act for inclusive rural growth.",
     gradient: "from-amber-500 to-orange-600",
     iconBg: "bg-amber-500/10",
     iconColor: "text-amber-500",
     borderHover: "hover:border-amber-400",
-    number: "02",
+    number: "03",
   },
   {
     icon: Sprout,
-    title: "Sustainable Agriculture",
+    title: "Sustainable Agriculture & Animal Resources Management",
     description:
-      "Organic farming, mushroom cultivation, Ganoderma fungus labs, and vertical farming for enhanced farmer income.",
+      "Organic farming, mushroom cultivation, Ganoderma fungus labs, vertical farming, and sustainable management of animal resources for enhanced farmer income.",
     gradient: "from-lime-500 to-green-600",
     iconBg: "bg-lime-500/10",
     iconColor: "text-lime-500",
     borderHover: "hover:border-lime-400",
-    number: "03",
+    number: "04",
   },
   {
     icon: Scale,
-    title: "Forest Policy & Governance",
+    title: "Forest Policy & Overall Governance",
     description:
-      "Joint Forest Management, CAMPA, National Green Tribunal advocacy, and sustainable forest management standards.",
+      "Joint Forest Management, CAMPA, National Green Tribunal advocacy, and sustainable forest management standards within a broader governance framework.",
     gradient: "from-blue-500 to-indigo-600",
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-500",
     borderHover: "hover:border-blue-400",
-    number: "04",
+    number: "05",
   },
   {
     icon: Thermometer,
     title: "Climate Change",
     description:
-      "South-South cooperation, climate-resilient development, forest hydrology research, and international workshops.",
+      "South-South cooperation, climate-resilient development, forest hydrology research, and international workshops for a sustainable future.",
     gradient: "from-red-500 to-rose-600",
     iconBg: "bg-red-500/10",
     iconColor: "text-red-500",
     borderHover: "hover:border-red-400",
-    number: "05",
+    number: "06",
   },
   {
     icon: Mountain,
@@ -76,7 +90,29 @@ const issues = [
     iconBg: "bg-teal-500/10",
     iconColor: "text-teal-500",
     borderHover: "hover:border-teal-400",
-    number: "06",
+    number: "07",
+  },
+  {
+    icon: Briefcase,
+    title: "Legal & Diplomatic Issues",
+    description:
+      "The issues of judicial intervention and need for quick justice to the people is an essential for a just jurisprudence and equitable legal framework.",
+    gradient: "from-slate-500 to-gray-600",
+    iconBg: "bg-slate-500/10",
+    iconColor: "text-slate-600",
+    borderHover: "hover:border-slate-400",
+    number: "08",
+  },
+  {
+    icon: Globe2,
+    title: "International Issues",
+    description:
+      "Relating to emerging geo-politics and the role of emerging India as a global leader in environmental diplomacy and international cooperation.",
+    gradient: "from-sky-500 to-blue-600",
+    iconBg: "bg-sky-500/10",
+    iconColor: "text-sky-500",
+    borderHover: "hover:border-sky-400",
+    number: "09",
   },
 ];
 

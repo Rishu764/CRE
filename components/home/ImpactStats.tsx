@@ -29,11 +29,16 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section className="py-20 lg:py-24 bg-gradient-to-br from-primary-dark via-primary to-primary-light relative overflow-hidden">
+    <section
+      className="py-20 lg:py-24 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #52b788 100%)",
+      }}
+    >
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-secondary-light rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full blur-3xl" style={{ background: "#e9c46a" }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,10 +58,14 @@ export default function ImpactStats() {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/15 transition-colors"
+              className="backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition-colors"
+              style={{ background: "rgba(255,255,255,0.1)" }}
             >
-              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-6 h-6 text-secondary-light" />
+              <div
+                className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
+                style={{ background: "rgba(255,255,255,0.2)" }}
+              >
+                <stat.icon className="w-6 h-6" style={{ color: "#e9c46a" }} />
               </div>
               <div className="text-2xl lg:text-3xl font-bold text-white mb-1">
                 {stat.number}
