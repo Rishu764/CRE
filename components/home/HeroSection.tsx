@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { ArrowDown, TreePine, Users, Globe, BookOpen } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 
 const heroSlides = [
@@ -187,41 +187,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom Stats Bar */}
-      <div className="relative z-10 bg-black/50 backdrop-blur-md border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
-            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <TreePine className="w-4 h-4" style={{ color: "#e9c46a" }} />
-                <span className="text-xl sm:text-2xl font-bold text-white">30+</span>
-              </div>
-              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>Years Experience</p>
-            </div>
-            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <Users className="w-4 h-4" style={{ color: "#e9c46a" }} />
-                <span className="text-xl sm:text-2xl font-bold text-white">500+</span>
-              </div>
-              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>Artisans Empowered</p>
-            </div>
-            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <Globe className="w-4 h-4" style={{ color: "#e9c46a" }} />
-                <span className="text-xl sm:text-2xl font-bold text-white">10+</span>
-              </div>
-              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>States Across India</p>
-            </div>
-            <div className="py-4 sm:py-5 px-3 sm:px-6 text-center">
-              <div className="flex items-center justify-center gap-2 mb-1">
-                <BookOpen className="w-4 h-4" style={{ color: "#e9c46a" }} />
-                <span className="text-xl sm:text-2xl font-bold text-white">200+</span>
-              </div>
-              <p className="text-xs sm:text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>Publications</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

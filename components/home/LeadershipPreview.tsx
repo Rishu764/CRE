@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, BookOpen, Globe2, ArrowRight, Trophy, Star, MapPin, GraduationCap } from "lucide-react";
+import { Award, BookOpen, Globe2, ArrowRight, Trophy, Star, MapPin, GraduationCap, Scale } from "lucide-react";
 import Link from "next/link";
 
 export default function LeadershipPreview() {
@@ -108,36 +108,48 @@ export default function LeadershipPreview() {
               <h3 className="text-2xl sm:text-3xl font-bold" style={{ color: "#e9c46a" }}>&amp; Vision</h3>
             </div>
 
-            {/* Bio paragraphs */}
-            <div className="space-y-4 text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-              <p>
-                V.K. Bahuguna is a former member of the Indian Forest Service, presently the chairman
-                of Centre for Resource Management and Environment and a freelance columnist. He had
-                wide-ranging professional experience in the Central Government, as well as the State
-                Government of Tripura. He served in the Ministry of Environment, Forests and Climate
-                Change, Government of India, as the director-general of the Indian Council of Forestry
-                Research and Education (ICFRE), the chancellor of Forest Research Institute (Deemed)
-                University from May 2011 to June 2013; a member of its Apex Policy making body, ICFRE
-                Society, from 2018 to 2020; and as the inspector-general of forests and DIGF from June
-                1997 to June 2004.
-              </p>
-              <p>
-                In 2011, he was the chief wildlife warden and managing director of Tripura Forest
-                Corporation and chairman of Agriculture and Planning Commission from February 2008 to
-                April 2015, looking after several departments. He superannuated from the Government of
-                Tripura as the principal secretary in April 2015. He is currently a member of the
-                President's Executive Council and the Kashmir Central University as the nominee of the
-                President of India. He also served as the vice-chairman of the Asia-Pacific Forestry
-                Organization from 2012 to 2014 and was an elected member of the Executive Committee at
-                the International Poplar Commission; the United Nations Food and Agriculture
-                Organization's technical arm for two years.
-              </p>
-              <p>
-                As a prolific writer, he authored three books and edited four others. Besides winning
-                the 'Great Son of India Award' by All India Intellectual Federation and several national
-                awards, he was awarded the prestigious 'Queen's Award' for promoting policies on
-                people's participation in forest management in the Commonwealth, United Kingdom.
-              </p>
+            {/* Bio — attractive card layout */}
+            <div className="space-y-3">
+              {[
+                {
+                  icon: "🏛️",
+                  heading: "Distinguished Career",
+                  text: "V.K. Bahuguna is a former member of the Indian Forest Service, presently the chairman of Centre for Resource Management and Environment and a freelance columnist. He served in the Ministry of Environment, Forests and Climate Change as Director-General of ICFRE, Chancellor of Forest Research Institute (Deemed) University (2011–2013), and as Inspector-General of Forests & DIGF (1997–2004).",
+                },
+                {
+                  icon: "🌿",
+                  heading: "Leadership & Governance",
+                  text: "In 2011, he was the Chief Wildlife Warden and Managing Director of Tripura Forest Corporation and Chairman of Agriculture & Planning Commission (2008–2015). He superannuated as Principal Secretary, Govt. of Tripura. He is currently a Presidential nominee in the Executive Council of Central University of Kashmir, and served as Vice-Chairman of APAFRI (2012–2014) and elected member of the International Poplar Commission (UN-FAO).",
+                },
+                {
+                  icon: "✍️",
+                  heading: "Author & Thought Leader",
+                  text: "A prolific writer, he authored three books and edited four others. He won the 'Great Son of India Award' by All India Intellectual Federation and the prestigious Queen's Award (Commonwealth, UK) for promoting people's participation in forest management.",
+                },
+                {
+                  icon: "⚖️",
+                  heading: "Court Commissioner — Madras High Court",
+                  text: "Appointed by the Madras High Court to assess compensation for Red Sanders trees of farmer Mr. Ganesan in Krishnagiri District, Tamil Nadu, against 2 acres acquired by NHAI (2008). The farmer had refused the meagre ₹1.5 lakh offered by the Forest Dept. & NHAI. Assisted by DFO Hosur Ms. Karthikeyani (Tamil Nadu Govt.), a scientific assessment was conducted and ₹1 crore 10 lakh was recommended — duly paid by NHAI.",
+                  highlight: true,
+                },
+              ].map((item) => (
+                <div
+                  key={item.heading}
+                  className="rounded-xl p-4 border transition-all hover:-translate-y-0.5"
+                  style={{
+                    background: item.highlight ? "rgba(167,139,250,0.06)" : "rgba(255,255,255,0.03)",
+                    borderColor: item.highlight ? "rgba(167,139,250,0.2)" : "rgba(255,255,255,0.07)",
+                  }}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-xl mt-0.5 shrink-0">{item.icon}</span>
+                    <div>
+                      <h4 className="text-base font-bold text-white mb-1">{item.heading}</h4>
+                      <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>{item.text}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Awards grid */}
@@ -149,18 +161,23 @@ export default function LeadershipPreview() {
                   { icon: <Globe2 className="w-5 h-5" style={{ color: "#38bdf8" }} />, title: "Vice-Chairman, APAFRI", sub: "Asia-Pacific Forestry Org. · 2012" },
                   { icon: <Award className="w-5 h-5" style={{ color: "#fb7185" }} />, title: "EMPI Innovation Award", sub: "From President APJ Abdul Kalam · 2007" },
                   { icon: <BookOpen className="w-5 h-5" style={{ color: "#34d399" }} />, title: "200+ Publications", sub: "International & national journals" },
+                  { icon: <Scale className="w-5 h-5" style={{ color: "#a78bfa" }} />, title: "Court Commissioner — Madras High Court", sub: "Red Sanders compensation assessment, Krishnagiri, Tamil Nadu · 2008", wide: true },
                 ].map((a) => (
                   <div
                     key={a.title}
-                    className="p-4 rounded-xl border transition-all hover:-translate-y-1"
+                    className={`p-4 rounded-xl border transition-all hover:-translate-y-1 ${a.wide ? "col-span-2" : ""}`}
                     style={{
                       background: a.gold ? "rgba(245,158,11,0.06)" : "rgba(255,255,255,0.03)",
                       borderColor: a.gold ? "rgba(245,158,11,0.2)" : "rgba(255,255,255,0.07)",
                     }}
                   >
-                    <div className="mb-2">{a.icon}</div>
-                    <div className="text-xs font-bold text-white leading-snug mb-1">{a.title}</div>
-                    <div className="text-[11px]" style={{ color: "rgba(255,255,255,0.4)" }}>{a.sub}</div>
+                    <div className="flex items-start gap-3">
+                      <div className="mt-0.5 shrink-0">{a.icon}</div>
+                      <div>
+                        <div className="text-xs font-bold text-white leading-snug mb-1">{a.title}</div>
+                        <div className="text-[11px]" style={{ color: "rgba(255,255,255,0.4)" }}>{a.sub}</div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
