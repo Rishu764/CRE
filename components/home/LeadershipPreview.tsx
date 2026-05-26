@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, BookOpen, Globe2, ArrowRight, Trophy, Star, MapPin, GraduationCap, Scale } from "lucide-react";
+import { Award, BookOpen, Globe2, ArrowRight, Trophy, Star, GraduationCap, Briefcase, Users } from "lucide-react";
 import Link from "next/link";
 
 export default function LeadershipPreview() {
@@ -16,7 +16,6 @@ export default function LeadershipPreview() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-20" style={{ background: "radial-gradient(circle, #2d6a4f 0%, transparent 70%)", transform: "translate(30%, -30%)" }} />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-10" style={{ background: "radial-gradient(circle, #e9c46a 0%, transparent 70%)", transform: "translate(-30%, 30%)" }} />
-        {/* Grid lines */}
         <div className="absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
           backgroundSize: "60px 60px"
@@ -59,19 +58,18 @@ export default function LeadershipPreview() {
                 alt="Dr. V.K. Bahuguna"
                 className="w-full h-full object-cover object-top"
               />
-              {/* Bottom gradient */}
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(5,14,9,0.95) 0%, rgba(5,14,9,0.4) 40%, transparent 70%)" }} />
 
               {/* Floating award badge */}
               <div className="absolute top-4 right-4 flex items-center gap-2 px-3 py-2 rounded-xl backdrop-blur-md border" style={{ background: "rgba(245,158,11,0.15)", borderColor: "rgba(245,158,11,0.3)" }}>
                 <Trophy className="w-4 h-4" style={{ color: "#fbbf24" }} />
-                <span className="text-xs font-bold" style={{ color: "#fbbf24" }}>Queen's Award</span>
+                <span className="text-xs font-bold" style={{ color: "#fbbf24" }}>Queen&apos;s Award</span>
               </div>
 
               {/* Bottom info */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
-                  {["Chairman, CRE", "Former DG, ICFRE", "National President, USP"].map((tag) => (
+                  {["Chairman, CRE", "Former DG, ICFRE", "IFS 1979 Batch"].map((tag) => (
                     <span key={tag} className="px-2.5 py-1 rounded-full text-[11px] font-semibold backdrop-blur-sm border" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)" }}>
                       {tag}
                     </span>
@@ -79,7 +77,7 @@ export default function LeadershipPreview() {
                 </div>
                 <div className="flex items-center gap-2 text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>
                   <GraduationCap className="w-3.5 h-3.5" />
-                  Ph.D. Ecology · M.Sc. University of Edinburgh, UK
+                  Ph.D. Ecology · M.Sc. University of Edinburgh, UK (2nd Position)
                 </div>
               </div>
             </div>
@@ -87,9 +85,9 @@ export default function LeadershipPreview() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-3">
               {[
-                { number: "30+", label: "Countries" },
-                { number: "10+", label: "States" },
-                { number: "600%", label: "Corp. Growth" },
+                { number: "30+", label: "Countries Visited" },
+                { number: "200+", label: "Publications" },
+                { number: "15K+", label: "Families Supported" },
               ].map((s) => (
                 <div key={s.label} className="rounded-xl p-4 text-center border" style={{ background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.07)" }}>
                   <div className="text-2xl font-black" style={{ color: "#52b788" }}>{s.number}</div>
@@ -112,37 +110,36 @@ export default function LeadershipPreview() {
             <div className="space-y-3">
               {[
                 {
-                  icon: "🏛️",
+                  icon: <Briefcase className="w-5 h-5" style={{ color: "#38bdf8" }} />,
                   heading: "Distinguished Career",
-                  text: "V.K. Bahuguna is a former member of the Indian Forest Service, presently the chairman of Centre for Resource Management and Environment and a freelance columnist. He served in the Ministry of Environment, Forests and Climate Change as Director-General of ICFRE, Chancellor of Forest Research Institute (Deemed) University (2011–2013), and as Inspector-General of Forests & DIGF (1997–2004).",
+                  text: "Indian Forest Service (1979 Batch). Superannuated as Principal Secretary, Government of Tripura in the Apex Scale. Served as Director General, ICFRE and Chancellor of FRI Deemed University in the rank of Secretary to Government of India. Inspector General of Forests and Deputy Inspector General of Forests at the Ministry of Environment & Forests, Government of India.",
                 },
                 {
-                  icon: "🌿",
-                  heading: "Leadership & Governance",
-                  text: "In 2011, he was the Chief Wildlife Warden and Managing Director of Tripura Forest Corporation and Chairman of Agriculture & Planning Commission (2008–2015). He superannuated as Principal Secretary, Govt. of Tripura. He is currently a Presidential nominee in the Executive Council of Central University of Kashmir, and served as Vice-Chairman of APAFRI (2012–2014) and elected member of the International Poplar Commission (UN-FAO).",
+                  icon: <Users className="w-5 h-5" style={{ color: "#34d399" }} />,
+                  heading: "Present Positions",
+                  text: "Chairman, Centre for Resource Management and Environment (CRE). Member, ICFRE Society (since June 2018). Presidential Nominee in the Executive Council and University Court of Central University of Kashmir (since Feb 2019). Chairman, Kalpavriksh Foundation.",
                 },
                 {
-                  icon: "✍️",
+                  icon: <Globe2 className="w-5 h-5" style={{ color: "#a78bfa" }} />,
+                  heading: "International Leadership",
+                  text: "Elected Vice-Chairman of Asia-Pacific Forestry Organization (2012). Elected to Executive Committee of International Poplar Commission, a UN/FAO body (2012). Chaired Technical Session at FAO Rome during World Forestry Week. Delivered Key-note at 16th Commonwealth Forestry Conference, Perth, Australia.",
+                },
+                {
+                  icon: <BookOpen className="w-5 h-5" style={{ color: "#f59e0b" }} />,
                   heading: "Author & Thought Leader",
-                  text: "A prolific writer, he authored three books and edited four others. He won the 'Great Son of India Award' by All India Intellectual Federation and the prestigious Queen's Award (Commonwealth, UK) for promoting people's participation in forest management.",
-                },
-                {
-                  icon: "⚖️",
-                  heading: "Court Commissioner — Madras High Court",
-                  text: "Appointed by the Madras High Court to assess compensation for Red Sanders trees of farmer Mr. Ganesan in Krishnagiri District, Tamil Nadu, against 2 acres acquired by NHAI (2008). The farmer had refused the meagre ₹1.5 lakh offered by the Forest Dept. & NHAI. Assisted by DFO Hosur Ms. Karthikeyani (Tamil Nadu Govt.), a scientific assessment was conducted and ₹1 crore 10 lakh was recommended — duly paid by NHAI.",
-                  highlight: true,
+                  text: "Over 200 publications including 54 policy papers, 74 technical research papers, 52 newspaper articles, and 18 books & bulletins. Architect of Joint Forest Management (JFM) and Forest Fire control policy framework in the country. Writes regular columns in national newspapers on environment, agriculture, tribal & rural development.",
                 },
               ].map((item) => (
                 <div
                   key={item.heading}
                   className="rounded-xl p-4 border transition-all hover:-translate-y-0.5"
                   style={{
-                    background: item.highlight ? "rgba(167,139,250,0.06)" : "rgba(255,255,255,0.03)",
-                    borderColor: item.highlight ? "rgba(167,139,250,0.2)" : "rgba(255,255,255,0.07)",
+                    background: "rgba(255,255,255,0.03)",
+                    borderColor: "rgba(255,255,255,0.07)",
                   }}
                 >
                   <div className="flex items-start gap-3">
-                    <span className="text-xl mt-0.5 shrink-0">{item.icon}</span>
+                    <div className="mt-0.5 shrink-0">{item.icon}</div>
                     <div>
                       <h4 className="text-base font-bold text-white mb-1">{item.heading}</h4>
                       <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>{item.text}</p>
@@ -154,18 +151,17 @@ export default function LeadershipPreview() {
 
             {/* Awards grid */}
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "rgba(255,255,255,0.3)" }}>Key Achievements</p>
+              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: "rgba(255,255,255,0.3)" }}>Key Awards & Honours</p>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { icon: <Trophy className="w-5 h-5" style={{ color: "#fbbf24" }} />, title: "Queen's Award for Forestry", sub: "Commonwealth Forestry Assoc., UK · 2000", gold: true },
-                  { icon: <Globe2 className="w-5 h-5" style={{ color: "#38bdf8" }} />, title: "Vice-Chairman, APAFRI", sub: "Asia-Pacific Forestry Org. · 2012" },
-                  { icon: <Award className="w-5 h-5" style={{ color: "#fb7185" }} />, title: "EMPI Innovation Award", sub: "From President APJ Abdul Kalam · 2007" },
-                  { icon: <BookOpen className="w-5 h-5" style={{ color: "#34d399" }} />, title: "200+ Publications", sub: "International & national journals" },
-                  { icon: <Scale className="w-5 h-5" style={{ color: "#a78bfa" }} />, title: "Court Commissioner — Madras High Court", sub: "Red Sanders compensation assessment, Krishnagiri, Tamil Nadu · 2008", wide: true },
+                  { icon: <Trophy className="w-5 h-5" style={{ color: "#fbbf24" }} />, title: "Queen's Award for Forestry", sub: "Commonwealth Forestry Association, UK · 2000", gold: true },
+                  { icon: <Award className="w-5 h-5" style={{ color: "#fb7185" }} />, title: "EMPI-Indian Express Innovation Award", sub: "From President APJ Abdul Kalam · 2007" },
+                  { icon: <Globe2 className="w-5 h-5" style={{ color: "#38bdf8" }} />, title: "Vice-Chairman, Asia-Pacific Forestry Organization", sub: "Elected at Guangzhou, China · 2012" },
+                  { icon: <Award className="w-5 h-5" style={{ color: "#34d399" }} />, title: "Uttarakhand Ratan & Great Son of India Award", sub: "All India Intellectual Federation · 2012 & 2013" },
                 ].map((a) => (
                   <div
                     key={a.title}
-                    className={`p-4 rounded-xl border transition-all hover:-translate-y-1 ${a.wide ? "col-span-2" : ""}`}
+                    className="p-4 rounded-xl border transition-all hover:-translate-y-1"
                     style={{
                       background: a.gold ? "rgba(245,158,11,0.06)" : "rgba(255,255,255,0.03)",
                       borderColor: a.gold ? "rgba(245,158,11,0.2)" : "rgba(255,255,255,0.07)",

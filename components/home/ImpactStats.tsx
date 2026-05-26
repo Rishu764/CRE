@@ -3,9 +3,9 @@ import { TrendingUp, Award, Globe2, Newspaper } from "lucide-react";
 const stats = [
   {
     icon: TrendingUp,
-    number: "₹23.30 Cr",
-    label: "Advocated for FRI Rehabilitation",
-    sublabel: "Funds requested through ICFRE Society",
+    number: "₹366 Cr",
+    label: "JICA Forest Project (Tripura)",
+    sublabel: "Japan International Cooperation Agency",
   },
   {
     icon: Award,
@@ -15,9 +15,9 @@ const stats = [
   },
   {
     icon: Globe2,
-    number: "72",
-    label: "International Workshop Participants",
-    sublabel: "From 6 countries in 2024",
+    number: "15,000+",
+    label: "Rural Families Impacted",
+    sublabel: "Through TFDPC livelihood programmes",
   },
   {
     icon: Newspaper,
