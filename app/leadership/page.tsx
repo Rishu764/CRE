@@ -5,118 +5,129 @@ export default function LeadershipPage() {
   return (
     <main className="min-h-screen" style={{ background: "#0a0f0d" }}>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full opacity-15" style={{ background: "radial-gradient(circle, #6366f1 0%, transparent 70%)", transform: "translate(30%,-30%)" }} />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full opacity-10" style={{ background: "radial-gradient(circle, #f59e0b 0%, transparent 70%)", transform: "translate(-30%,30%)" }} />
+      <section className="relative pt-28 pb-20 overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0a1a14] via-[#0f1f18] to-[#1b4332]/40" />
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl" style={{ background: "#52b788" }} />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full opacity-10 blur-3xl" style={{ background: "#2d6a4f" }} />
         </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
+          {/* Top Row: Photo + Name + Quick Info */}
+          <div className="flex flex-col lg:flex-row gap-8 items-start mb-12">
             {/* Photo */}
-            <div className="lg:col-span-4">
-              <div className="relative rounded-2xl overflow-hidden" style={{ maxWidth: 380 }}>
+            <div className="shrink-0">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-3xl overflow-hidden ring-4 ring-white/10 shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/author.png" alt="Dr. V.K. Bahuguna" className="w-full h-auto block object-cover object-top" />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,15,13,0.95) 0%, transparent 60%)" }} />
-                <div className="absolute top-4 right-4 px-3 py-1.5 rounded-xl border text-xs font-bold" style={{ background: "rgba(245,158,11,0.15)", borderColor: "rgba(245,158,11,0.3)", color: "#fbbf24" }}>
-                  <Trophy className="w-3 h-3 inline mr-1" />Queen&apos;s Award
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {["Chairman, CRE (Centre for Resource Management & Environment)", "Indian Forest Service (IFS) (Retd.) 1979", "Former DG, ICFRE (Indian Council of Forestry Research & Education)"].map(t => (
-                      <span key={t} className="px-2 py-0.5 rounded-full text-[11px] font-semibold border" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)" }}>{t}</span>
-                    ))}
-                  </div>
-                  <p className="text-xs" style={{ color: "rgba(255,255,255,0.4)" }}>
-                    <GraduationCap className="w-3 h-3 inline mr-1" />Ph.D. Ecology · M.Sc. University of Edinburgh, UK (2nd Position)
-                  </p>
+                <img src="/author.png" alt="Dr. V.K. Bahuguna" className="w-full h-full object-cover object-top contrast-125 brightness-110" />
+                <div className="absolute top-3 right-3 px-2.5 py-1.5 rounded-lg text-[10px] font-bold bg-[#1b4332] text-white flex items-center gap-1 border border-[#52b788]/30">
+                  <Trophy className="w-3 h-3" />Queen&apos;s Award
                 </div>
               </div>
+            </div>
 
-              {/* Quick stats */}
-              <div className="grid grid-cols-3 gap-2 mt-4">
-                {[{ n: "30+", l: "Countries", color: "#38bdf8" }, { n: "200+", l: "Publications", color: "#a78bfa" }, { n: "15K+", l: "Families", color: "#f472b6" }].map(s => (
-                  <div key={s.l} className="rounded-xl p-3 text-center border" style={{ background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.07)" }}>
-                    <div className="text-xl font-black" style={{ color: s.color }}>{s.n}</div>
-                    <div className="text-[10px] mt-0.5" style={{ color: "rgba(255,255,255,0.4)" }}>{s.l}</div>
+            {/* Name + Title */}
+            <div className="flex-1">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                <Star className="w-3 h-3 text-[#52b788]" />Leadership Profile
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-3">Dr. V.K. Bahuguna</h1>
+              <p className="text-base lg:text-lg text-emerald-300/80 max-w-3xl leading-relaxed">
+                Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mt-5">
+                {["Chairman, CRE (Centre for Resource Management & Environment)", "Indian Forest Service (IFS) (Retd.) 1979", "Former DG, ICFRE (Indian Council of Forestry Research & Education)"].map(t => (
+                  <span key={t} className="px-3 py-1 rounded-full text-[11px] font-semibold bg-white/5 border border-white/10 text-white/80">{t}</span>
+                ))}
+              </div>
+
+              {/* Quick stats row */}
+              <div className="flex flex-wrap gap-6 mt-6">
+                {[{ n: "30+", l: "Countries", color: "#52b788" }, { n: "200+", l: "Publications", color: "#52b788" }, { n: "15K+", l: "Families Impacted", color: "#52b788" }].map(s => (
+                  <div key={s.l} className="flex items-center gap-2">
+                    <span className="text-2xl font-black" style={{ color: s.color }}>{s.n}</span>
+                    <span className="text-xs text-white/40">{s.l}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Info Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-12">
+            {[
+              { label: "Date of Birth", value: "21 August 1954" },
+              { label: "Nationality", value: "Indian" },
+              { label: "Last Post", value: "Superannuated as Agriculture Production Commissioner and Principal Secretary, Government of Tripura (Apex Scale · Level 17)" },
+              { label: "Contact", value: "bahugunaifs@gmail.com · 9810405137 / 9412057333" },
+            ].map(d => (
+              <div key={d.label} className="rounded-2xl p-4 bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm">
+                <div className="text-[10px] uppercase tracking-wider mb-1.5 text-white/30 font-semibold">{d.label}</div>
+                <div className="text-sm font-medium text-white/90">{d.value}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Two Column: Present Positions + Education */}
+          <div className="grid lg:grid-cols-2 gap-6">
+            {/* Present Positions */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest mb-4 text-white/30 flex items-center gap-2">
+                <Briefcase className="w-4 h-4 text-emerald-500" />Present Positions
+              </h3>
+              <div className="space-y-3">
+                {[
+                  { title: "Chairman, Centre for Resource Management & Environment (CRE)", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers." },
+                  { title: "Member, Indian Council of Forestry Research and Education (ICFRE) Society (since June 2018)", desc: "Nominated as Member of the Indian Council of Forestry Research and Education Society — the Apex policy making body of this autonomous institution under Ministry of Environment, Forest & Climate Change, chaired by the Minister." },
+                  { title: "Presidential Nominee — Central University of Kashmir (since Feb 2019)", desc: "Appointed by the President of India as his nominee in the Executive Council and University Court of Central University of Kashmir." },
+                  { title: "Chairman, Kalpavriksh Foundation", desc: "A Trust dedicated to serving the Indian Cow and Cow products with a network of 75,000 cows." },
+                ].map(p => (
+                  <div key={p.title} className="rounded-xl p-4 border-l-4 border-l-[#52b788] bg-white/[0.02] border border-[#2d6a4f]/20">
+                    <div className="text-sm font-bold text-white mb-1">{p.title}</div>
+                    <div className="text-xs text-white/50 leading-relaxed">{p.desc}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Header info */}
-            <div className="lg:col-span-8 space-y-6">
-              <div>
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border mb-4" style={{ background: "rgba(99,102,241,0.08)", borderColor: "rgba(99,102,241,0.2)", color: "#818cf8" }}>
-                  <Star className="w-3 h-3" style={{ fill: "#fbbf24", color: "#fbbf24" }} />Leadership Profile
-                </span>
-                <h1 className="text-4xl sm:text-5xl font-black text-white mb-1">Dr. V.K. Bahuguna</h1>
-                <p className="text-lg" style={{ color: "#818cf8" }}>Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University</p>
-              </div>
-
-              {/* Personal details */}
-              <div className="grid sm:grid-cols-2 gap-3">
+            {/* Education */}
+            <div>
+              <h3 className="text-xs font-bold uppercase tracking-widest mb-4 text-white/30 flex items-center gap-2">
+                <GraduationCap className="w-4 h-4 text-emerald-500" />Education
+              </h3>
+              <div className="space-y-2">
                 {[
-                  { label: "Date of Birth", value: "21 August 1954" },
-                  { label: "Nationality", value: "Indian" },
-                  { label: "Last Post", value: "Superannuated as Agriculture Production Commissioner and Principal Secretary, Government of Tripura (Apex Scale · Level 17)" },
-                  { label: "Contact", value: "bahugunaifs@gmail.com · 9810405137 / 9412057333" },
-                ].map(d => (
-                  <div key={d.label} className="rounded-xl p-4 border" style={{ background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.07)" }}>
-                    <div className="text-[11px] uppercase tracking-wider mb-1" style={{ color: "rgba(255,255,255,0.3)" }}>{d.label}</div>
-                    <div className="text-sm font-medium text-white">{d.value}</div>
+                  { year: "1999", degree: "3-Month Course on Forestry", inst: "Gainesville, USA" },
+                  { year: "1990", degree: "Ph.D. Ecology", inst: "University of Garhwal at Forest Research Institute, Dehradun" },
+                  { year: "1988", degree: "M.Sc. Resource Management (2nd in University)", inst: "University of Edinburgh, UK" },
+                  { year: "1981", degree: "Post Graduate Diploma in Forestry", inst: "Indian Forest College, Dehradun (now IGNFA)" },
+                  { year: "1975", degree: "M.Sc. Zoology (1st in University)", inst: "University of Garhwal, Uttarakhand" },
+                ].map(e => (
+                  <div key={e.year} className="flex items-start gap-4 rounded-xl p-3 bg-[#1b4332]/20 border border-[#2d6a4f]/20 hover:bg-[#1b4332]/30 transition-colors">
+                    <div className="shrink-0 w-12 h-12 rounded-lg flex items-center justify-center text-xs font-black bg-white/10 text-white">
+                      {e.year}
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-white">{e.degree}</div>
+                      <div className="text-xs text-white/40 mt-0.5">{e.inst}</div>
+                    </div>
                   </div>
                 ))}
               </div>
 
-              {/* Present Positions */}
-              <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: "rgba(255,255,255,0.3)" }}>
-                  Present Positions
-                </h3>
-                <div className="space-y-2">
-                  {[
-                    { title: "Chairman, Centre for Resource Management & Environment (CRE)", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers.", color: "#22d3ee" },
-                    { title: "Member, Indian Council of Forestry Research and Education (ICFRE) Society (since June 2018)", desc: "Nominated as Member of the Indian Council of Forestry Research and Education Society — the Apex policy making body of this autonomous institution under Ministry of Environment, Forest & Climate Change, chaired by the Minister.", color: "#a78bfa" },
-                    { title: "Presidential Nominee — Central University of Kashmir (since Feb 2019)", desc: "Appointed by the President of India as his nominee in the Executive Council and University Court of Central University of Kashmir.", color: "#f472b6" },
-                    { title: "Chairman, Kalpavriksh Foundation", desc: "A Trust dedicated to serving the Indian Cow and Cow products with a network of 75,000 cows.", color: "#4ade80" },
-                  ].map(p => (
-                    <div key={p.title} className="rounded-xl p-4 border" style={{ background: `${p.color}08`, borderColor: `${p.color}20` }}>
-                      <div className="text-sm font-bold text-white mb-1">{p.title}</div>
-                      <div className="text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>{p.desc}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Education */}
-              <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: "rgba(255,255,255,0.3)" }}>
-                  <GraduationCap className="w-4 h-4 inline mr-2" />Education
-                </h3>
-                <div className="space-y-2">
-                  {[
-                    { year: "1999", degree: "3-Month Course on Forestry", inst: "Gainesville, USA", color: "#f97316" },
-                    { year: "1990", degree: "Ph.D. Ecology", inst: "University of Garhwal at Forest Research Institute, Dehradun", color: "#fbbf24" },
-                    { year: "1988", degree: "M.Sc. Resource Management (2nd in University)", inst: "University of Edinburgh, UK", color: "#38bdf8" },
-                    { year: "1981", degree: "Post Graduate Diploma in Forestry", inst: "Indian Forest College, Dehradun (now IGNFA)", color: "#a78bfa" },
-                    { year: "1975", degree: "M.Sc. Zoology (1st in University)", inst: "University of Garhwal, Uttarakhand", color: "#4ade80" },
-                  ].map(e => (
-                    <div key={e.year} className="flex gap-4 rounded-xl p-3 border" style={{ background: "rgba(255,255,255,0.02)", borderColor: "rgba(255,255,255,0.06)" }}>
-                      <span className="text-xs font-mono shrink-0 mt-0.5" style={{ color: e.color }}>{e.year}</span>
-                      <div>
-                        <div className="text-sm font-semibold text-white">{e.degree}</div>
-                        <div className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>{e.inst}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* Qualification note */}
+              <p className="text-xs text-white/30 mt-4 pl-3 border-l-2 border-white/10">
+                <GraduationCap className="w-3 h-3 inline mr-1" />Ph.D. Ecology · M.Sc. University of Edinburgh, UK (2nd Position)
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Career Timeline - WHITE BACKGROUND - Stair Step Design */}
+      {/* Career Timeline - WHITE BACKGROUND */}
       <section className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-black text-gray-900 mb-12 flex items-center gap-3">
