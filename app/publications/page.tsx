@@ -283,8 +283,11 @@ export default function PublicationsPage() {
             Publications
           </h1>
           
-          <p className="text-xl text-white/70 max-w-3xl mb-12 leading-relaxed">
-            4 decades of research, policy advocacy, columnist and freelance YouTube journalism across forestry, ecology and governance
+          <p className="text-xl text-white/70 max-w-3xl mb-4 leading-relaxed">
+            40 decades environment climate change tribal and rural development and international and national issues
+          </p>
+          <p className="text-sm text-white/50 max-w-3xl mb-12 leading-relaxed">
+            Publications of professional articles in National and International publications like Ambio, International Forestry Journals and FAO technical papers — organized by category
           </p>
 
           {/* Stats Grid */}

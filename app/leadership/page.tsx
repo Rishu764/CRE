@@ -140,7 +140,7 @@ export default function LeadershipPage() {
           <h3 className="text-lg font-bold text-gray-700 mb-6 border-b border-gray-200 pb-2">Positions held under the State Government of Tripura</h3>
           <div className="relative mb-12">
             {[
-              { year: "Present", period: "Present", title: "Columnist", org: "", desc: "Though have been writing since after joining Indian Forest Service (IFS) in 1979 in National newspaper like Indian Express, Hindustan Times and later on in Financial Times, Statesman, Telegraph etc but after Superannuation have largely writing in the daily Pioneer after the famous Journalist and Editor of Pioneer Mr Chandan Mitra one of the oldest news papers of India, invited to write for his paper. Also write occasionally for Millennium Post and The Emerging India national papers. So far more than 600 articles published.", color: "#f59e0b" },
+              { year: "Present", period: "Present", title: "Columnist", org: "40 decades of writing on environment, climate change, tribal and rural development, and international and national issues", desc: "Though have been writing since after joining Indian Forest Service (IFS) in 1979 in National newspaper like Indian Express, Hindustan Times and later on in Financial Times, Statesman, Telegraph etc but after Superannuation have largely writing in the daily Pioneer after the famous Journalist and Editor of Pioneer Mr Chandan Mitra one of the oldest news papers of India, invited to write for his paper. Also write occasionally for Millennium Post and The Emerging India national papers. So far more than 600 articles published.", color: "#f59e0b" },
               { year: "Present", period: "Present", title: "Chairman, Centre for Resource Management & Environment (CRE) and Ujan Vikas Manch", org: "", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers.", color: "#10b981" },
               { year: "2013", period: "July 2013 till retirement and beyond. Reappointed on the same post but resigned after 7 months in April 2015", title: "Principal Secretary/later on designated as Agriculture Production Commissioner (in the Apex Scale grade of Chief Secretary/Secretary to Government of India)", org: "Forests, Animal Resources, Agriculture/Horticulture/Watershed Management/State Land Use Board, Planning and Coordination etc Departments, Government of Tripura", desc: "Initially appointed as Principal Secretary Planning and Coordination and prepared the planned budget and special package for SC, ST, Backward classes and Minorities. Ensuring convergence in the management of natural resources for better livelihood of people and forest and environmental conservation in the state. A successful model for rehabilitation of tribal and rural development was created in tune with combating climate change. Initiated reforms in the agriculture and allied sectors (leading to quantum jump in productivity of rice) and completely restructured the forest administration. Took action for improvement of indigenous cows.", color: "#8b5cf6" },
               { year: "2004", period: "15th July 2004 to 4th February 2008", title: "Managing Director, Tripura Forest Development and Plantation Corporation (TFDPC) Ltd & Additional Principal Chief Conservator of Forests and Chief Wildlife Warden & CEO, Tripura JBIC Project & Mission Director, Tripura Rubber Mission", org: "Government of Tripura (Rank of Additional Secretary to Govt. of India)", desc: "Infused corporate culture and turned round the fortune of the loss making company into a viable profit making public enterprise. Successfully settled more than 300 tribal shifting cultivators permanently during the tenure on Rubber Plantations and created employment opportunities for another 6000 people for which the corporation won national award. Successfully set up two National Parks – the Bison National Park and Clouded leopard National Park. Designed and implemented a Rs. 366 crore Japan International Cooperation Agency (JICA) project for Improvement of Forest and Environment and Poverty Reduction. Designed the Indo-German project for integrated natural resources management for the tribal dominated Dhalai District. As Mission Director, Tripura Rubber Mission, prepared an Action Plan for expansion of Rubber in Tripura for the next 20 years. The Rubber has now become the main industrial crop of the State along with Bamboo and is a major source of livelihood to several thousand rural families.", color: "#ef4444" },
@@ -482,44 +482,6 @@ export default function LeadershipPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Publications CTA - WHITE BACKGROUND */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-black text-gray-900 mb-8 flex items-center gap-3">
-            <BookOpen className="w-6 h-6 text-violet-600" />Publications
-          </h2>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            {[
-              { count: "54", label: "Policy & Institutional Papers", color: "#0891b2" },
-              { count: "74", label: "Technical Research Papers", color: "#7c3aed" },
-              { count: "52", label: "Columnist & Freelance YouTube Journalism", color: "#d97706" },
-              { count: "18", label: "Books & Bulletins", color: "#db2777" },
-            ].map(p => (
-              <div key={p.label} className="rounded-xl p-5 border border-gray-200 bg-white text-center shadow-sm">
-                <div className="text-3xl font-black mb-1" style={{ color: p.color }}>{p.count}</div>
-                <div className="text-xs text-gray-500">{p.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA to full publications page */}
-          <a
-            href="/publications"
-            className="flex items-center justify-between rounded-2xl p-6 border border-violet-200 bg-violet-50 transition-all hover:-translate-y-0.5 hover:shadow-lg group"
-          >
-            <div>
-              <div className="text-lg font-bold text-gray-900 mb-1">View All 200+ Publications</div>
-              <div className="text-sm text-gray-600">
-                Publications of professional articles in National and International publications like Ambio, International Forestry Journals and FAO technical papers — organized by category
-              </div>
-            </div>
-            <div className="text-2xl ml-4 group-hover:translate-x-1 transition-transform text-violet-600">→</div>
-          </a>
         </div>
       </section>
 
