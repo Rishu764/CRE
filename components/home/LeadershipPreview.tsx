@@ -46,7 +46,7 @@ export default function LeadershipPreview() {
                 <span style={{ color: "#52b788" }}>Bahuguna</span>
               </h2>
               <p className="text-sm font-medium tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.35)" }}>
-                IFS (Retd.) · 1979 Batch · Chairman, CRE
+                Indian Forest Service (IFS) (Retd.) · 1979 Batch · Chairman, Centre for Resource Management & Environment (CRE)
               </p>
             </div>
 
@@ -69,7 +69,7 @@ export default function LeadershipPreview() {
               {/* Bottom info */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="flex flex-wrap gap-2 mb-3">
-                  {["Chairman, CRE", "Former DG, ICFRE", "IFS 1979 Batch"].map((tag) => (
+                  {["Chairman, Centre for Resource Management & Environment (CRE)", "Former DG, Indian Council of Forestry Research & Education (ICFRE)", "Indian Forest Service (IFS) 1979 Batch"].map((tag) => (
                     <span key={tag} className="px-2.5 py-1 rounded-full text-[11px] font-semibold backdrop-blur-sm border" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)" }}>
                       {tag}
                     </span>
@@ -112,7 +112,7 @@ export default function LeadershipPreview() {
                 {
                   icon: <Briefcase className="w-5 h-5" style={{ color: "#38bdf8" }} />,
                   heading: "Distinguished Career",
-                  text: "Indian Forest Service (1979 Batch). Superannuated as Principal Secretary, Government of Tripura in the Apex Scale. Served as Director General, ICFRE and Chancellor of FRI Deemed University in the rank of Secretary to Government of India. Inspector General of Forests and Deputy Inspector General of Forests at the Ministry of Environment & Forests, Government of India.",
+                  text: "Indian Forest Service (1979 Batch). Superannuated as Agriculture Production Commissioner and Principal Secretary, Government of Tripura in the Apex Scale. Served as Director General, Indian Council of Forestry Research and Education (ICFRE) and Chancellor of Forest Research Institute (FRI) Deemed University in the rank of Secretary to Government of India. Inspector General of Forests and Deputy Inspector General of Forests at the Ministry of Environment & Forests, Government of India.",
                 },
                 {
                   icon: <Users className="w-5 h-5" style={{ color: "#34d399" }} />,
@@ -127,7 +127,7 @@ export default function LeadershipPreview() {
                 {
                   icon: <BookOpen className="w-5 h-5" style={{ color: "#f59e0b" }} />,
                   heading: "Author & Thought Leader",
-                  text: "Over 200 publications including 54 policy papers, 74 technical research papers, 52 newspaper articles, and 18 books & bulletins. Architect of Joint Forest Management (JFM) and Forest Fire control policy framework in the country. Writes regular columns in national newspapers on environment, agriculture, tribal & rural development.",
+                  text: "Over 200 publications including 54 policy papers, 74 technical research papers, 52 columns & freelance YouTube journalism pieces, and 18 books & bulletins. Architect of Joint Forest Management (JFM) and Forest Fire control policy framework in the country. Writes regular columns in national newspapers on environment, agriculture, tribal & rural development.",
                 },
               ].map((item) => (
                 <div

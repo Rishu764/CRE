@@ -23,7 +23,7 @@ export default function LeadershipPage() {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex flex-wrap gap-2 mb-2">
-                    {["Chairman, CRE", "IFS (Retd.) 1979", "Former DG, ICFRE"].map(t => (
+                    {["Chairman, CRE (Centre for Resource Management & Environment)", "Indian Forest Service (IFS) (Retd.) 1979", "Former DG, ICFRE (Indian Council of Forestry Research & Education)"].map(t => (
                       <span key={t} className="px-2 py-0.5 rounded-full text-[11px] font-semibold border" style={{ background: "rgba(255,255,255,0.08)", borderColor: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.85)" }}>{t}</span>
                     ))}
                   </div>
@@ -51,7 +51,7 @@ export default function LeadershipPage() {
                   <Star className="w-3 h-3" style={{ fill: "#fbbf24", color: "#fbbf24" }} />Leadership Profile
                 </span>
                 <h1 className="text-4xl sm:text-5xl font-black text-white mb-1">Dr. V.K. Bahuguna</h1>
-                <p className="text-lg" style={{ color: "#818cf8" }}>IFS (Retd.) · Indian Forest Service, 1979 Batch</p>
+                <p className="text-lg" style={{ color: "#818cf8" }}>Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University</p>
               </div>
 
               {/* Personal details */}
@@ -59,7 +59,7 @@ export default function LeadershipPage() {
                 {[
                   { label: "Date of Birth", value: "21 August 1954" },
                   { label: "Nationality", value: "Indian" },
-                  { label: "Last Post", value: "Principal Secretary, Govt. of Tripura (Apex Scale · Level 17)" },
+                  { label: "Last Post", value: "Superannuated as Agriculture Production Commissioner and Principal Secretary, Government of Tripura (Apex Scale · Level 17)" },
                   { label: "Contact", value: "bahugunaifs@gmail.com · 9810405137 / 9412057333" },
                 ].map(d => (
                   <div key={d.label} className="rounded-xl p-4 border" style={{ background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.07)" }}>
@@ -77,7 +77,7 @@ export default function LeadershipPage() {
                 <div className="space-y-2">
                   {[
                     { title: "Chairman, Centre for Resource Management & Environment (CRE)", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers.", color: "#22d3ee" },
-                    { title: "Member, ICFRE Society (since June 2018)", desc: "Nominated as Member of the Indian Council of Forestry Research and Education Society — the Apex policy making body of this autonomous institution under Ministry of Environment, Forest & Climate Change, chaired by the Minister.", color: "#a78bfa" },
+                    { title: "Member, Indian Council of Forestry Research and Education (ICFRE) Society (since June 2018)", desc: "Nominated as Member of the Indian Council of Forestry Research and Education Society — the Apex policy making body of this autonomous institution under Ministry of Environment, Forest & Climate Change, chaired by the Minister.", color: "#a78bfa" },
                     { title: "Presidential Nominee — Central University of Kashmir (since Feb 2019)", desc: "Appointed by the President of India as his nominee in the Executive Council and University Court of Central University of Kashmir.", color: "#f472b6" },
                     { title: "Chairman, Kalpavriksh Foundation", desc: "A Trust dedicated to serving the Indian Cow and Cow products with a network of 75,000 cows.", color: "#4ade80" },
                   ].map(p => (
@@ -95,6 +95,7 @@ export default function LeadershipPage() {
                 </h3>
                 <div className="space-y-2">
                   {[
+                    { year: "1999", degree: "3-Month Course on Forestry", inst: "Gainesville, USA", color: "#f97316" },
                     { year: "1990", degree: "Ph.D. Ecology", inst: "University of Garhwal at Forest Research Institute, Dehradun", color: "#fbbf24" },
                     { year: "1988", degree: "M.Sc. Resource Management (2nd in University)", inst: "University of Edinburgh, UK", color: "#38bdf8" },
                     { year: "1981", degree: "Post Graduate Diploma in Forestry", inst: "Indian Forest College, Dehradun (now IGNFA)", color: "#a78bfa" },
@@ -128,11 +129,13 @@ export default function LeadershipPage() {
           <h3 className="text-lg font-bold text-gray-700 mb-6 border-b border-gray-200 pb-2">Positions held under the State Government of Tripura</h3>
           <div className="relative mb-12">
             {[
-              { year: "1981", period: "July 17th 1981 to May 15th 1982", title: "Assistant Conservator of Forests", org: "Government of Tripura, Agartala", desc: "Wrote a book on Wildlife Management for the students and field officers.", color: "#3b82f6" },
-              { year: "1982", period: "May 16th 1982 to April 30th 1985", title: "Divisional Forest Officer (DFO) and Wildlife Warden", org: "Teliamura Forest Division, Tripura", desc: "Adopted innovative forest management practices like forming of \"friends of people\" groups for involving people in forestry (a precursor to the present day JFM). Removed massive encroachments from forests.", color: "#14b8a6" },
-              { year: "1993", period: "12th July 1993 to 14th October 1995", title: "Conservator of Forests, Northern Circle, Kumarghat, Tripura and Deputy Chief Wildlife Warden, Tripura", org: "Government of Tripura", desc: "Started a massive movement of involvement of people in forest management through JFM. Busted the gang of international smugglers and in the process escaped an attempt on life on 4th May 1994.", color: "#eab308" },
+              { year: "Present", period: "Present", title: "Columnist", org: "", desc: "Though have been writing since after joining Indian Forest Service (IFS) in 1979 in National newspaper like Indian Express, Hindustan Times and later on in Financial Times, Statesman, Telegraph etc but after Superannuation have largely writing in the daily Pioneer after the famous Journalist and Editor of Pioneer Mr Chandan Mitra one of the oldest news papers of India, invited to write for his paper. Also write occasionally for Millennium Post and The Emerging India national papers. So far more than 600 articles published.", color: "#f59e0b" },
+              { year: "Present", period: "Present", title: "Chairman, Centre for Resource Management & Environment (CRE) and Ujan Vikas Manch", org: "", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers.", color: "#10b981" },
+              { year: "2013", period: "July 2013 till retirement and beyond. Reappointed on the same post but resigned after 7 months in April 2015", title: "Principal Secretary/later on designated as Agriculture Production Commissioner (in the Apex Scale grade of Chief Secretary/Secretary to Government of India)", org: "Forests, Animal Resources, Agriculture/Horticulture/Watershed Management/State Land Use Board, Planning and Coordination etc Departments, Government of Tripura", desc: "Initially appointed as Principal Secretary Planning and Coordination and prepared the planned budget and special package for SC, ST, Backward classes and Minorities. Ensuring convergence in the management of natural resources for better livelihood of people and forest and environmental conservation in the state. A successful model for rehabilitation of tribal and rural development was created in tune with combating climate change. Initiated reforms in the agriculture and allied sectors (leading to quantum jump in productivity of rice) and completely restructured the forest administration. Took action for improvement of indigenous cows.", color: "#8b5cf6" },
               { year: "2004", period: "15th July 2004 to 4th February 2008", title: "Managing Director, Tripura Forest Development and Plantation Corporation (TFDPC) Ltd & Additional Principal Chief Conservator of Forests and Chief Wildlife Warden & CEO, Tripura JBIC Project & Mission Director, Tripura Rubber Mission", org: "Government of Tripura (Rank of Additional Secretary to Govt. of India)", desc: "Infused corporate culture and turned round the fortune of the loss making company into a viable profit making public enterprise. Successfully settled more than 300 tribal shifting cultivators permanently during the tenure on Rubber Plantations and created employment opportunities for another 6000 people for which the corporation won national award. Successfully set up two National Parks – the Bison National Park and Clouded leopard National Park. Designed and implemented a Rs. 366 crore Japan International Cooperation Agency (JICA) project for Improvement of Forest and Environment and Poverty Reduction. Designed the Indo-German project for integrated natural resources management for the tribal dominated Dhalai District. As Mission Director, Tripura Rubber Mission, prepared an Action Plan for expansion of Rubber in Tripura for the next 20 years. The Rubber has now become the main industrial crop of the State along with Bamboo and is a major source of livelihood to several thousand rural families.", color: "#ef4444" },
-              { year: "2013", period: "July 2013 till retirement and beyond. Reappointed on the same post but resigned after 7 months in April 2015", title: "Principal Secretary/later on designated as Agriculture Production Commissioner (in the Apex Scale grade of Chief Secretary/Secretary to Government of India)", org: "Forests, Animal Resources, Agriculture/Horticulture/Watershed Management/State Land Use Board, Planning and Coordination etc Departments, Government of Tripura", desc: "Initially appointed as Principal Secretary Planning and prepared the planned budget and special package for SC, ST, Backward classes and Minorities. Ensuring convergence in the management of natural resources for better livelihood of people and forest and environmental conservation in the state. A successful model for rehabilitation of tribal and rural development was created in tune with combating climate change. Initiated reforms in the agriculture and allied sectors (leading to quantum jump in productivity of rice) and completely restructured the forest administration. Took action for improvement of indigenous cows.", color: "#8b5cf6" },
+              { year: "1993", period: "12th July 1993 to 14th October 1995", title: "Conservator of Forests, Northern Circle, Kumarghat, Tripura and Deputy Chief Wildlife Warden, Tripura", org: "Government of Tripura", desc: "Started a massive movement of involvement of people in forest management through JFM. Busted the gang of international smugglers and in the process escaped an attempt on life on 4th May 1994.", color: "#eab308" },
+              { year: "1982", period: "May 16th 1982 to April 30th 1985", title: "Divisional Forest Officer (DFO) and Wildlife Warden", org: "Teliamura Forest Division, Tripura", desc: "Adopted innovative forest management practices like forming of \"friends of people\" groups for involving people in forestry (a precursor to the present day JFM). Removed massive encroachments from forests.", color: "#14b8a6" },
+              { year: "1981", period: "July 17th 1981 to May 15th 1982", title: "Assistant Conservator of Forests", org: "Government of Tripura, Agartala", desc: "Wrote a book on Wildlife Management for the students and field officers.", color: "#3b82f6" },
             ].map((item, index, arr) => (
               <div 
                 key={index}
@@ -141,18 +144,18 @@ export default function LeadershipPage() {
                 {/* Mobile Layout */}
                 <div className="md:hidden flex gap-3">
                   <div className="flex flex-col items-center">
-                    <div className="w-4 h-4 rounded-full shrink-0 border-2 border-white shadow-md" style={{ background: item.color }} />
+                    <div className="w-3 h-3 rounded-full shrink-0 border-2 border-white shadow-sm" style={{ background: item.color }} />
                     {index < arr.length - 1 && (
-                      <div className="w-0.5 flex-1 min-h-[60px]" style={{ background: `linear-gradient(to bottom, ${item.color}, ${arr[index + 1].color})` }} />
+                      <div className="w-0.5 flex-1 min-h-[40px]" style={{ background: `linear-gradient(to bottom, ${item.color}60, ${arr[index + 1].color}60)` }} />
                     )}
                   </div>
-                  <div className="pb-6 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-lg font-black" style={{ color: item.color }}>{item.year}</span>
-                      <div className="h-1.5 w-12 rounded-full" style={{ background: item.color }} />
+                  <div className="pb-4 flex-1">
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <span className="text-sm font-bold" style={{ color: item.color }}>{item.year}</span>
+                      <span className="text-[10px] text-gray-400 font-mono">{item.period}</span>
                     </div>
                     <h3 className="text-sm font-bold text-gray-900 leading-tight">{item.title}</h3>
-                    <p className="text-xs font-medium mt-0.5" style={{ color: item.color }}>{item.org}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{item.org}</p>
                     <ul className="mt-1 space-y-0.5">
                       {item.desc.split(". ").filter(Boolean).map((point, pi) => (
                         <li key={pi} className="text-xs text-gray-500 flex gap-1.5">
@@ -161,29 +164,31 @@ export default function LeadershipPage() {
                         </li>
                       ))}
                     </ul>
-                    <p className="text-[10px] text-gray-400 mt-1 font-mono">{item.period}</p>
                   </div>
                 </div>
-                {/* Desktop Layout - Stair Step */}
-                <div className="hidden md:flex items-start gap-4" style={{ marginLeft: `${index * 8}%`, maxWidth: `${100 - index * 8}%` }}>
-                  <div className="shrink-0 w-16 text-right pt-2">
-                    <span className="text-2xl font-black text-gray-300">{item.year}</span>
+                {/* Desktop Layout - Compact */}
+                <div className="hidden md:flex items-start gap-4">
+                  <div className="shrink-0 w-14 text-right pt-1">
+                    <span className="text-sm font-bold" style={{ color: item.color }}>{item.year}</span>
                   </div>
-                  <div className="flex-1 flex items-stretch gap-0">
-                    <div className="w-32 sm:w-40 rounded-full shrink-0" style={{ background: item.color, minHeight: 28 }} />
-                    <div className="pl-4 pb-6">
-                      <h3 className="text-base font-bold text-gray-900 leading-tight">{item.title}</h3>
-                      <p className="text-xs font-medium mt-0.5" style={{ color: item.color }}>{item.org}</p>
-                      <ul className="mt-1.5 space-y-0.5">
-                        {item.desc.split(". ").filter(Boolean).map((point, pi) => (
-                          <li key={pi} className="text-xs text-gray-500 flex gap-1.5 max-w-md">
-                            <span className="shrink-0 mt-1.5 w-1 h-1 rounded-full bg-gray-400" />
-                            <span>{point.endsWith(".") ? point : `${point}.`}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="text-[10px] text-gray-400 mt-1 font-mono">{item.period}</p>
-                    </div>
+                  <div className="flex flex-col items-center pt-1.5">
+                    <div className="w-3 h-3 rounded-full shrink-0 shadow-sm ring-2 ring-white" style={{ background: item.color }} />
+                    {index < arr.length - 1 && (
+                      <div className="w-0.5 flex-1 min-h-[50px]" style={{ background: `linear-gradient(to bottom, ${item.color}50, ${arr[index + 1].color}50)` }} />
+                    )}
+                  </div>
+                  <div className="flex-1 pb-5 pl-2">
+                    <h3 className="text-sm font-bold text-gray-900 leading-tight">{item.title}</h3>
+                    <p className="text-xs font-medium mt-0.5" style={{ color: item.color }}>{item.org}</p>
+                    <ul className="mt-1 space-y-0.5">
+                      {item.desc.split(". ").filter(Boolean).map((point, pi) => (
+                        <li key={pi} className="text-xs text-gray-500 flex gap-1.5 max-w-2xl">
+                          <span className="shrink-0 mt-1.5 w-1 h-1 rounded-full bg-gray-400" />
+                          <span>{point.endsWith(".") ? point : `${point}.`}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-[10px] text-gray-400 mt-1 font-mono">{item.period}</p>
                   </div>
                 </div>
               </div>
@@ -194,12 +199,13 @@ export default function LeadershipPage() {
           <h3 className="text-lg font-bold text-gray-700 mb-6 border-b border-gray-200 pb-2">Positions held under the Central Government</h3>
           <div className="relative">
             {[
-              { year: "1985", period: "May 13th 1985 to 30th September 1990", title: "Silviculturist", org: "Forest Research Institute, Dehra Dun", desc: "Conducted research on Forest Fire fighting Technologies and land management on vulnerable slopes to prevent landslides and disasters in Hilly areas. Standardized the seed and Nursery technology for a large number of species. Wrote the Management plan for the new-forest estate first since 1942.", color: "#22c55e" },
-              { year: "1990", period: "5th Dec. 1990 to June 30, 1993", title: "Associate Professor", org: "Indian Institute of Forest Management, Bhopal", desc: "Designed the M.Phil Course on Natural Resource Management for the practicing resource managers. Today the course is most sought after by the NGOs and Industry. First time assessed the economics of forest management and dependency of rural poor on forest in India and published two papers in AMBIO the Journal of Royal society of science, Sweden. Set up the regional centre of NAEB and published internationally acclaimed report on Joint Forest Management.", color: "#84cc16" },
-              { year: "1995", period: "17th October 1995 to 23rd June 1997", title: "Assistant Director General (Media and Extension)", org: "Indian Council of Forestry Research and Education (ICFRE), Dehra Dun", desc: "Developed strategy for Media and Extension activities for the ICFRE Institutes and made films etc. Today, the strategy is paying dividend as farmers and industry are using the technologies. Implemented the World Bank Project on Extension.", color: "#f59e0b" },
-              { year: "1997", period: "24th June 1997 to March 2002 (Deputy IGF) & April 2002 to June 30th 2004 (IGF)", title: "Inspector General of Forests (Joint Secretary level) & Deputy Inspector General of Forests", org: "Ministry of Environment & Forests, Government of India, New Delhi", desc: "Established Compensatory Afforestation Management Planning Authority (CAMPA). Architect of Joint Forest Management (JFM) and Forest Fire control policy framework in the country. Issued land mark Guidelines on 4th February 2004 on recognition of traditional rights of the tribal people on forestland. Edited the only reference book on progress of JFM in India \"Root to Canopy\" in 2004. Streamlined the Forestry Clearance procedures by amending the Forest Conservation Rules in 2003 and 2004. Devised a programme for prevention of natural disasters in Uttarakhand Hills. Issued guidelines of Criteria and Indicators of Sustainable Forest Management.", color: "#f97316" },
-              { year: "2008", period: "6th February 2008 to 19.05.2011", title: "Technical Expert (Forestry), National Rainfed Area Authority (NRAA)", org: "Planning Commission, Government of India, New Delhi (Rank and pay scale of Additional Secretary to Government of India)", desc: "Ensured integrated and holistic natural resource management in the rain fed areas for better productivity of Agriculture and natural resource and convergence for livelihood creation in the rural areas and developed and implemented \"Bundlekhand Package\" for convergence of holistic natural resources management and livelihoods.", color: "#ec4899" },
               { year: "2011", period: "20th May 2011 to 4th June 2013", title: "Director General, Indian Council of Forestry Research and Education (ICFRE) and Chancellor of Forest Research Institute (FRI) Deemed University, Dehradun", org: "In the Apex Scale, in the rank of Secretary to Government of India", desc: "Led the Supreme Court appointed team for conducting the Environmental Impact Assessment of iron ore Mines in Karnataka and prepared mine rehabilitation plans of 70 mines. Revised the Forest Types of India and published new Forest types of India Book a monumental work for all times to come. Launched a 'Direct to consumer' scheme for transfer of technology and total shift in research priorities. Started international fellowship in FRI Deemed University for the SAARC students. Streamlined the functioning of the University with focus on international cooperation. Fine-tuned research priorities with interface with tribal and rural life, created a division for interactions with Panchayats and focused on Climate change necessities and completely changed the focus of research, education and extension. Started all India coordinated projects on several topics with Agriculture and other Universities.", color: "#a855f7" },
+              { year: "2008", period: "6th February 2008 to 19.05.2011", title: "Technical Expert (Forestry), National Rainfed Area Authority (NRAA)", org: "Planning Commission, Government of India, New Delhi (Rank and pay scale of Additional Secretary to Government of India)", desc: "Ensured integrated and holistic natural resource management in the rain fed areas for better productivity of Agriculture and natural resource and convergence for livelihood creation in the rural areas and developed and implemented \"Bundlekhand Package\" for convergence of holistic natural resources management and livelihoods.", color: "#ec4899" },
+              { year: "1997", period: "24th June 1997 to March 2002 (Deputy IGF) & April 2002 to June 30th 2004 (IGF)", title: "Inspector General of Forests (Joint Secretary level) & Deputy Inspector General of Forests", org: "Ministry of Environment & Forests, Government of India, New Delhi", desc: "Established Compensatory Afforestation Management Planning Authority (CAMPA). Architect of Joint Forest Management (JFM) and Forest Fire control policy framework in the country. Issued land mark Guidelines on 4th February 2004 on recognition of traditional rights of the tribal people on forestland. Edited the only reference book on progress of JFM in India \"Root to Canopy\" in 2004. Streamlined the Forestry Clearance procedures by amending the Forest Conservation Rules in 2003 and 2004. Devised a programme for prevention of natural disasters in Uttarakhand Hills. Issued guidelines of Criteria and Indicators of Sustainable Forest Management.", color: "#f97316" },
+              { year: "1995", period: "17th October 1995 to 23rd June 1997", title: "Assistant Director General (Media and Extension)", org: "Indian Council of Forestry Research and Education (ICFRE), Dehra Dun", desc: "Developed strategy for Media and Extension activities for the ICFRE Institutes and made films etc. Today, the strategy is paying dividend as farmers and industry are using the technologies. Implemented the World Bank Project on Extension.", color: "#f59e0b" },
+              { year: "1990", period: "5th Dec. 1990 to June 30, 1993", title: "Associate Professor", org: "Indian Institute of Forest Management, Bhopal", desc: "Designed the M.Phil Course on Natural Resource Management for the practicing resource managers. Today the course is most sought after by the NGOs and Industry. First time assessed the economics of forest management and dependency of rural poor on forest in India and published two papers in AMBIO the Journal of Royal society of science, Sweden. Set up the regional centre of NAEB and published internationally acclaimed report on Joint Forest Management.", color: "#84cc16" },
+              { year: "1985", period: "May 13th 1985 to 30th September 1990", title: "Silviculturist", org: "Forest Research Institute, Dehra Dun", desc: "Conducted research on Forest Fire fighting Technologies and land management on vulnerable slopes to prevent landslides and disasters in Hilly areas. Standardized the seed and Nursery technology for a large number of species. Wrote the Management plan for the new-forest estate first since 1942.", color: "#22c55e" },
+              { year: "1979", period: "1979 to 1981", title: "Indian Forest Service (IFS) Probationer (Training)", org: "Indian Forest College, Dehra Dun (now IGNFA)", desc: "Completed the Associate of Indian Forest College (AIFC) course. Awarded R. S. Mathur Prize in the final examination of 1979-1981 course.", color: "#64748b" },
             ].map((item, index, arr) => (
               <div 
                 key={index}
@@ -208,18 +214,18 @@ export default function LeadershipPage() {
                 {/* Mobile Layout */}
                 <div className="md:hidden flex gap-3">
                   <div className="flex flex-col items-center">
-                    <div className="w-4 h-4 rounded-full shrink-0 border-2 border-white shadow-md" style={{ background: item.color }} />
+                    <div className="w-3 h-3 rounded-full shrink-0 border-2 border-white shadow-sm" style={{ background: item.color }} />
                     {index < arr.length - 1 && (
-                      <div className="w-0.5 flex-1 min-h-[60px]" style={{ background: `linear-gradient(to bottom, ${item.color}, ${arr[index + 1].color})` }} />
+                      <div className="w-0.5 flex-1 min-h-[40px]" style={{ background: `linear-gradient(to bottom, ${item.color}60, ${arr[index + 1].color}60)` }} />
                     )}
                   </div>
-                  <div className="pb-6 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-lg font-black" style={{ color: item.color }}>{item.year}</span>
-                      <div className="h-1.5 w-12 rounded-full" style={{ background: item.color }} />
+                  <div className="pb-4 flex-1">
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <span className="text-sm font-bold" style={{ color: item.color }}>{item.year}</span>
+                      <span className="text-[10px] text-gray-400 font-mono">{item.period}</span>
                     </div>
                     <h3 className="text-sm font-bold text-gray-900 leading-tight">{item.title}</h3>
-                    <p className="text-xs font-medium mt-0.5" style={{ color: item.color }}>{item.org}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{item.org}</p>
                     <ul className="mt-1 space-y-0.5">
                       {item.desc.split(". ").filter(Boolean).map((point, pi) => (
                         <li key={pi} className="text-xs text-gray-500 flex gap-1.5">
@@ -228,29 +234,31 @@ export default function LeadershipPage() {
                         </li>
                       ))}
                     </ul>
-                    <p className="text-[10px] text-gray-400 mt-1 font-mono">{item.period}</p>
                   </div>
                 </div>
-                {/* Desktop Layout - Stair Step */}
-                <div className="hidden md:flex items-start gap-4" style={{ marginLeft: `${index * 7}%`, maxWidth: `${100 - index * 7}%` }}>
-                  <div className="shrink-0 w-16 text-right pt-2">
-                    <span className="text-2xl font-black text-gray-300">{item.year}</span>
+                {/* Desktop Layout - Compact */}
+                <div className="hidden md:flex items-start gap-4">
+                  <div className="shrink-0 w-14 text-right pt-1">
+                    <span className="text-sm font-bold" style={{ color: item.color }}>{item.year}</span>
                   </div>
-                  <div className="flex-1 flex items-stretch gap-0">
-                    <div className="w-32 sm:w-40 rounded-full shrink-0" style={{ background: item.color, minHeight: 28 }} />
-                    <div className="pl-4 pb-6">
-                      <h3 className="text-base font-bold text-gray-900 leading-tight">{item.title}</h3>
-                      <p className="text-xs font-medium mt-0.5" style={{ color: item.color }}>{item.org}</p>
-                      <ul className="mt-1.5 space-y-0.5">
-                        {item.desc.split(". ").filter(Boolean).map((point, pi) => (
-                          <li key={pi} className="text-xs text-gray-500 flex gap-1.5 max-w-md">
-                            <span className="shrink-0 mt-1.5 w-1 h-1 rounded-full bg-gray-400" />
-                            <span>{point.endsWith(".") ? point : `${point}.`}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="text-[10px] text-gray-400 mt-1 font-mono">{item.period}</p>
-                    </div>
+                  <div className="flex flex-col items-center pt-1.5">
+                    <div className="w-3 h-3 rounded-full shrink-0 shadow-sm ring-2 ring-white" style={{ background: item.color }} />
+                    {index < arr.length - 1 && (
+                      <div className="w-0.5 flex-1 min-h-[50px]" style={{ background: `linear-gradient(to bottom, ${item.color}50, ${arr[index + 1].color}50)` }} />
+                    )}
+                  </div>
+                  <div className="flex-1 pb-5 pl-2">
+                    <h3 className="text-sm font-bold text-gray-900 leading-tight">{item.title}</h3>
+                    <p className="text-xs font-medium mt-0.5" style={{ color: item.color }}>{item.org}</p>
+                    <ul className="mt-1 space-y-0.5">
+                      {item.desc.split(". ").filter(Boolean).map((point, pi) => (
+                        <li key={pi} className="text-xs text-gray-500 flex gap-1.5 max-w-2xl">
+                          <span className="shrink-0 mt-1.5 w-1 h-1 rounded-full bg-gray-400" />
+                          <span>{point.endsWith(".") ? point : `${point}.`}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-[10px] text-gray-400 mt-1 font-mono">{item.period}</p>
                   </div>
                 </div>
               </div>
@@ -381,7 +389,7 @@ export default function LeadershipPage() {
               { flag: "🇨🇭", country: "Switzerland", desc: "International Conference on Community Forestry, Interlaken · 2004", img: "https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=400&q=80" },
               { flag: "🇺🇸", country: "USA", desc: "University of Florida 3-month course · 1999. World Bank & Smithsonian discussions · 2012", img: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=400&q=80" },
               { flag: "🇳🇵", country: "Nepal", desc: "REDD+ inspection, ICIMOD bilateral discussions · 2011. International Seminar on Community Forestry · 2009", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&q=80" },
-              { flag: "🇸🇪", country: "Sweden", desc: "IFS officer training oversight, Swedish Forestry Agency & SLU discussions · 2012", img: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=400&q=80" },
+              { flag: "🇸🇪", country: "Sweden", desc: "Indian Forest Service (IFS) officer training oversight, Swedish Forestry Agency & SLU discussions · 2012", img: "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=400&q=80" },
               { flag: "🇰🇭", country: "Cambodia", desc: "Ta Prohm Temple tree preservation project inspection, Siem Reap · 2012", img: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=400&q=80" },
               { flag: "🇿🇦", country: "South Africa", desc: "JFM presentation to SA Forest Dept., community woodlots visit · 2001", img: "https://images.unsplash.com/photo-1580060839134-75a5edca2e99?w=400&q=80" },
               { flag: "🇩🇪", country: "Germany", desc: "International Conference on Renewable Energy, Bonn · 2004", img: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=400&q=80" },
@@ -447,7 +455,7 @@ export default function LeadershipPage() {
             {[
               { count: "54", label: "Policy & Institutional Papers", color: "#0891b2" },
               { count: "74", label: "Technical Research Papers", color: "#7c3aed" },
-              { count: "52", label: "Newspaper Articles", color: "#d97706" },
+              { count: "52", label: "Columnist & Freelance YouTube Journalism", color: "#d97706" },
               { count: "18", label: "Books & Bulletins", color: "#db2777" },
             ].map(p => (
               <div key={p.label} className="rounded-xl p-5 border border-gray-200 bg-white text-center shadow-sm">
@@ -465,7 +473,7 @@ export default function LeadershipPage() {
             <div>
               <div className="text-lg font-bold text-gray-900 mb-1">View All 200+ Publications</div>
               <div className="text-sm text-gray-600">
-                Complete list of research papers, newspaper articles, books and bulletins — organized by category
+                Publications of professional articles in National and International publications like Ambio, International Forestry Journals and FAO technical papers — organized by category
               </div>
             </div>
             <div className="text-2xl ml-4 group-hover:translate-x-1 transition-transform text-violet-600">→</div>

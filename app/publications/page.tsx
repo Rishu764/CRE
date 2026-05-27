@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { BookOpen, Newspaper, FileText, BookMarked } from "lucide-react";
+import { BookOpen, Newspaper, FileText, BookMarked, Search, Calendar, Tag } from "lucide-react";
 
 const tabs = [
-  { id: "policy", label: "Policy & Institutional", icon: FileText, color: "#52b788" },
-  { id: "technical", label: "Technical Research", icon: BookOpen, color: "#38bdf8" },
-  { id: "newspaper", label: "Newspaper Articles", icon: Newspaper, color: "#e9c46a" },
-  { id: "books", label: "Books & Bulletins", icon: BookMarked, color: "#fb7185" },
+  { id: "policy", label: "Policy & Institutional", icon: FileText, color: "#1b4332" },
+  { id: "technical", label: "Technical Research", icon: BookOpen, color: "#2d6a4f" },
+  { id: "newspaper", label: "Columnist & Freelance YouTube Journalism", icon: Newspaper, color: "#e9c46a" },
+  { id: "books", label: "Books & Bulletins", icon: BookMarked, color: "#52b788" },
 ];
 
 const policyPapers = [
@@ -259,43 +259,74 @@ export default function PublicationsPage() {
   };
 
   return (
-    <main className="min-h-screen" style={{ background: "#f0f4f1" }}>
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-emerald-50/30">
 
       {/* ── HERO ── */}
-      <section className="relative pt-32 pb-24 overflow-hidden" style={{ background: "linear-gradient(135deg, #0a1a14 0%, #0f2a1e 60%, #1b4332 100%)" }}>
-        <div className="absolute inset-0 pointer-events-none opacity-[0.05]"
-          style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-        <div className="absolute bottom-0 left-0 right-0 h-28"
-          style={{ background: "linear-gradient(to bottom, transparent, #f0f4f1)" }} />
-
+      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#0a1a14] via-[#1b4332] to-[#2d6a4f]">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-400 rounded-full blur-3xl"></div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border mb-6"
-            style={{ background: "rgba(82,183,136,0.12)", borderColor: "rgba(82,183,136,0.3)", color: "#52b788" }}>
-            <BookOpen className="w-3 h-3" />Dr. V.K. Bahuguna · IFS (Retd.)
-          </span>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-4 leading-none">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 backdrop-blur-sm border border-emerald-400/30 flex items-center justify-center">
+              <BookOpen className="w-6 h-6 text-emerald-400" />
+            </div>
+            <span className="text-emerald-400 text-sm font-semibold uppercase tracking-wider">
+              Dr. V.K. Bahuguna · Indian Forest Service (IFS) (Retd.)
+            </span>
+          </div>
+          
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
             Publications
           </h1>
-          <p className="text-lg max-w-xl mb-12" style={{ color: "rgba(255,255,255,0.55)" }}>
-            4 decades of research, policy advocacy and journalism across forestry, ecology and governance
+          
+          <p className="text-xl text-white/70 max-w-3xl mb-12 leading-relaxed">
+            4 decades of research, policy advocacy, columnist and freelance YouTube journalism across forestry, ecology and governance
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+
+          {/* Stats Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { n: "54", l: "Policy & Institutional", id: "policy", icon: FileText, c: "#52b788", bg: "rgba(82,183,136,0.12)" },
-              { n: "74", l: "Technical Research", id: "technical", icon: BookOpen, c: "#38bdf8", bg: "rgba(56,189,248,0.12)" },
-              { n: "52", l: "Newspaper Articles", id: "newspaper", icon: Newspaper, c: "#e9c46a", bg: "rgba(233,196,106,0.12)" },
-              { n: "18", l: "Books & Bulletins", id: "books", icon: BookMarked, c: "#fb7185", bg: "rgba(251,113,133,0.12)" },
+              { n: "54", l: "Policy & Institutional", id: "policy", icon: FileText, gradient: "from-[#1b4332] to-[#2d6a4f]" },
+              { n: "74", l: "Technical Research", id: "technical", icon: BookOpen, gradient: "from-[#2d6a4f] to-[#52b788]" },
+              { n: "52", l: "Columnist & Freelance Youtube Journalism", id: "newspaper", icon: Newspaper, gradient: "from-[#52b788] to-[#74c69d]" },
+              { n: "18", l: "Books & Bulletins", id: "books", icon: BookMarked, gradient: "from-[#e9c46a] to-[#f4a261]" },
             ].map(s => (
-              <button key={s.l} onClick={() => { setActiveTab(s.id); setSearch(""); }}
-                className="text-left rounded-2xl p-5 border transition-all hover:-translate-y-1"
-                style={{
-                  background: activeTab === s.id ? s.bg : "rgba(255,255,255,0.04)",
-                  borderColor: activeTab === s.id ? `${s.c}50` : "rgba(255,255,255,0.08)",
-                  boxShadow: activeTab === s.id ? `0 8px 24px ${s.c}25` : "none",
-                }}>
-                <s.icon className="w-5 h-5 mb-3" style={{ color: s.c }} />
-                <div className="text-3xl font-black mb-1" style={{ color: s.c }}>{s.n}</div>
-                <div className="text-xs font-medium text-white/60">{s.l}</div>
+              <button
+                key={s.id}
+                onClick={() => { setActiveTab(s.id); setSearch(""); }}
+                className={`group relative overflow-hidden rounded-2xl p-6 transition-all duration-300 ${
+                  activeTab === s.id 
+                    ? 'bg-white shadow-2xl scale-105' 
+                    : 'bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:scale-102'
+                }`}
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${s.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
+                
+                <div className="relative">
+                  <s.icon className={`w-8 h-8 mb-4 transition-colors ${
+                    activeTab === s.id ? 'text-[#1b4332]' : 'text-white/60 group-hover:text-white'
+                  }`} />
+                  
+                  <div className={`text-4xl font-black mb-2 transition-colors ${
+                    activeTab === s.id ? 'text-[#1b4332]' : 'text-white'
+                  }`}>
+                    {s.n}
+                  </div>
+                  
+                  <div className={`text-sm font-medium transition-colors ${
+                    activeTab === s.id ? 'text-gray-600' : 'text-white/60 group-hover:text-white/80'
+                  }`}>
+                    {s.l}
+                  </div>
+                </div>
+                
+                {activeTab === s.id && (
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1b4332] to-[#52b788]"></div>
+                )}
               </button>
             ))}
           </div>
@@ -303,96 +334,143 @@ export default function PublicationsPage() {
       </section>
 
       {/* ── CONTENT ── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-        {/* Tab bar + search */}
-        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between mb-8">
-          <div className="flex flex-wrap gap-2">
-            {tabs.map(tab => (
-              <button key={tab.id} onClick={() => { setActiveTab(tab.id); setSearch(""); }}
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border transition-all"
-                style={{
-                  background: activeTab === tab.id ? tab.color : "white",
-                  borderColor: activeTab === tab.id ? tab.color : "#e5e7eb",
-                  color: activeTab === tab.id ? "white" : "#6b7280",
-                  boxShadow: activeTab === tab.id ? `0 4px 14px ${tab.color}40` : "none",
-                }}>
-                <tab.icon className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">{tab.label}</span>
-                <span className="sm:hidden">{tab.label.split(" ")[0]}</span>
-                <span className="text-[11px] px-1.5 py-0.5 rounded-full font-mono"
-                  style={{ background: activeTab === tab.id ? "rgba(255,255,255,0.25)" : "#f3f4f6", color: activeTab === tab.id ? "white" : "#9ca3af" }}>
-                  {dataMap[tab.id].length}
-                </span>
-              </button>
-            ))}
+        {/* Tab Navigation + Search */}
+        <div className="mb-12">
+          {/* Tab Pills */}
+          <div className="flex flex-wrap gap-3 mb-6">
+            {tabs.map(tab => {
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => { setActiveTab(tab.id); setSearch(""); }}
+                  className={`group flex items-center gap-3 px-6 py-3.5 rounded-xl font-semibold transition-all duration-300 ${
+                    activeTab === tab.id
+                      ? 'bg-gradient-to-r from-[#1b4332] to-[#2d6a4f] text-white shadow-lg shadow-emerald-900/30 scale-105'
+                      : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200 hover:border-emerald-300'
+                  }`}
+                >
+                  <Icon className={`w-5 h-5 transition-transform group-hover:scale-110 ${
+                    activeTab === tab.id ? 'text-emerald-300' : 'text-gray-400'
+                  }`} />
+                  <span className="hidden sm:inline">{tab.label}</span>
+                  <span className="sm:hidden">{tab.label.split(" ")[0]}</span>
+                  <span className={`text-xs px-2.5 py-1 rounded-full font-bold ${
+                    activeTab === tab.id 
+                      ? 'bg-white/20 text-white' 
+                      : 'bg-gray-100 text-gray-500'
+                  }`}>
+                    {dataMap[tab.id].length}
+                  </span>
+                </button>
+              );
+            })}
           </div>
-          <div className="relative w-full sm:w-64">
-            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            <input type="text" placeholder="Search publications..." value={search}
+
+          {/* Search Bar */}
+          <div className="relative max-w-xl">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <input
+              type="text"
+              placeholder={`Search in ${activeTabData.label.toLowerCase()}...`}
+              value={search}
               onChange={e => setSearch(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-full border border-gray-200 text-sm bg-white text-gray-700 focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100" />
+              className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-gray-200 text-gray-700 placeholder:text-gray-400 focus:outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-100 transition-all bg-white shadow-sm"
+            />
+            {search && (
+              <button
+                onClick={() => setSearch("")}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              >
+                ✕
+              </button>
+            )}
           </div>
         </div>
 
-        {/* Section heading */}
-        <div className="flex items-center gap-3 mb-6 pb-5 border-b-2 border-gray-200">
-          <div className="w-11 h-11 rounded-2xl flex items-center justify-center shadow-sm"
-            style={{ background: `${activeTabData.color}18` }}>
-            <activeTabData.icon className="w-5 h-5" style={{ color: activeTabData.color }} />
+        {/* Results Header */}
+        <div className="flex items-center justify-between mb-8 pb-6 border-b-2 border-gray-200">
+          <div className="flex items-center gap-4">
+            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg bg-gradient-to-br ${
+              activeTab === 'policy' ? 'from-[#1b4332] to-[#2d6a4f]' :
+              activeTab === 'technical' ? 'from-[#2d6a4f] to-[#52b788]' :
+              activeTab === 'newspaper' ? 'from-[#52b788] to-[#74c69d]' :
+              'from-[#e9c46a] to-[#f4a261]'
+            }`}>
+              <activeTabData.icon className="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-black text-gray-900">{activeTabData.label}</h2>
+              <p className="text-sm text-gray-500 mt-1">
+                {filtered.length} {search ? "results found" : "publications"}
+              </p>
+            </div>
           </div>
-          <div>
-            <h2 className="text-xl font-black text-gray-900">{activeTabData.label}</h2>
-            <p className="text-xs text-gray-400">{filtered.length} {search ? "results found" : "publications"}</p>
-          </div>
-          <div className="ml-auto h-1 w-24 rounded-full" style={{ background: `linear-gradient(90deg, ${activeTabData.color}, transparent)` }} />
         </div>
 
-        {/* Publication cards — magazine style */}
+        {/* Publication List */}
         {filtered.length === 0 ? (
-          <div className="text-center py-20 text-gray-400">
-            <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-20" />
-            <p className="text-lg font-medium">No results for &ldquo;{search}&rdquo;</p>
+          <div className="text-center py-24">
+            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
+              <Search className="w-10 h-10 text-gray-300" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">No results found</h3>
+            <p className="text-gray-500">Try adjusting your search terms</p>
           </div>
         ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((item) => {
+          <div className="space-y-4">
+            {filtered.map((item, idx) => {
               const year = extractYear(item.ref);
               const source = extractSource(item.ref);
+              
               return (
-                <div key={item.no}
-                  className="group relative bg-white rounded-2xl p-5 border border-gray-100 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 overflow-hidden flex flex-col">
-                  {/* Top color bar */}
-                  <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl"
-                    style={{ background: `linear-gradient(90deg, ${activeTabData.color}, ${activeTabData.color}60)` }} />
+                <div
+                  key={item.no}
+                  className="group relative bg-white rounded-2xl p-6 border-2 border-gray-100 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl"
+                >
+                  {/* Left accent bar */}
+                  <div className={`absolute left-0 top-6 bottom-6 w-1 rounded-r-full transition-all duration-300 ${
+                    activeTab === 'policy' ? 'bg-gradient-to-b from-[#1b4332] to-[#2d6a4f]' :
+                    activeTab === 'technical' ? 'bg-gradient-to-b from-[#2d6a4f] to-[#52b788]' :
+                    activeTab === 'newspaper' ? 'bg-gradient-to-b from-[#52b788] to-[#74c69d]' :
+                    'bg-gradient-to-b from-[#e9c46a] to-[#f4a261]'
+                  } group-hover:w-2`}></div>
 
-                  {/* Number + year row */}
-                  <div className="flex items-center justify-between mb-3 mt-1">
-                    <span className="text-xs font-black font-mono px-2.5 py-1 rounded-full"
-                      style={{ background: `${activeTabData.color}12`, color: activeTabData.color }}>
-                      #{item.no}
-                    </span>
-                    {year && (
-                      <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-100 text-gray-500">
-                        {year}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Citation text */}
-                  <p className="text-sm leading-relaxed text-gray-700 flex-1 mb-4">
-                    {item.ref}
-                  </p>
-
-                  {/* Source tag at bottom */}
-                  {source && (
-                    <div className="flex items-center gap-1.5 mt-auto pt-3 border-t border-gray-100">
-                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: activeTabData.color }} />
-                      <span className="text-[11px] font-semibold text-gray-400 truncate">{source}</span>
+                  <div className="flex items-start gap-6 ml-4">
+                    {/* Number Badge */}
+                    <div className={`flex-shrink-0 w-16 h-16 rounded-xl flex items-center justify-center font-black text-xl shadow-md ${
+                      activeTab === 'policy' ? 'bg-gradient-to-br from-[#1b4332] to-[#2d6a4f] text-white' :
+                      activeTab === 'technical' ? 'bg-gradient-to-br from-[#2d6a4f] to-[#52b788] text-white' :
+                      activeTab === 'newspaper' ? 'bg-gradient-to-br from-[#52b788] to-[#74c69d] text-white' :
+                      'bg-gradient-to-br from-[#e9c46a] to-[#f4a261] text-white'
+                    }`}>
+                      {item.no}
                     </div>
-                  )}
+
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-3 mb-3">
+                        {year && (
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 text-gray-700 text-xs font-semibold">
+                            <Calendar className="w-3 h-3" />
+                            {year}
+                          </span>
+                        )}
+                        {source && (
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">
+                            <Tag className="w-3 h-3" />
+                            {source}
+                          </span>
+                        )}
+                      </div>
+                      
+                      <p className="text-gray-700 leading-relaxed">
+                        {item.ref}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -401,11 +479,18 @@ export default function PublicationsPage() {
 
         {/* Newspaper note */}
         {activeTab === "newspaper" && !search && (
-          <div className="mt-8 rounded-2xl p-5 border border-amber-200 bg-amber-50 flex gap-3">
-            <span className="text-xl shrink-0">📝</span>
-            <p className="text-sm text-amber-800 leading-relaxed">
-              After August 2016, Dr. Bahuguna writes 2–3 articles per month on diverse matters of national importance in The Pioneer and other publications. The above list is illustrative, not exhaustive.
-            </p>
+          <div className="mt-12 rounded-2xl p-6 bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200">
+            <div className="flex gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-400 flex items-center justify-center text-2xl">
+                📝
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-amber-900 mb-2">Ongoing Contributions</h3>
+                <p className="text-amber-800 leading-relaxed">
+                  After August 2016, Dr. Bahuguna writes 2–3 articles per month on diverse matters of national importance in The Pioneer and other publications. The above list is illustrative, not exhaustive.
+                </p>
+              </div>
+            </div>
           </div>
         )}
       </section>
