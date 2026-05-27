@@ -279,88 +279,119 @@ export default function LeadershipPage() {
       </section>
 
       {/* Awards */}
-      <section className="py-16 border-t" style={{ borderColor: "rgba(255,255,255,0.05)" }}>
+      <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-10">
-            <Trophy className="w-7 h-7" style={{ color: "#fbbf24" }} />
-            <h2 className="text-2xl font-black text-white">Awards & Honours</h2>
-            <span className="text-xs px-3 py-1 rounded-full font-mono" style={{ background: "rgba(251,191,36,0.12)", color: "#fbbf24" }}>15 recognitions</span>
-          </div>
 
-          {/* Featured award — Queen's */}
-          <div className="relative rounded-2xl p-6 sm:p-8 mb-6 overflow-hidden border" style={{ background: "linear-gradient(135deg, rgba(245,158,11,0.12), rgba(251,191,36,0.06))", borderColor: "rgba(245,158,11,0.3)" }}>
-            <div className="absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl opacity-20" style={{ background: "#fbbf24", transform: "translate(30%,-30%)" }} />
-            <div className="relative z-10 flex flex-col sm:flex-row gap-6 items-start">
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center shrink-0" style={{ background: "rgba(245,158,11,0.2)", color: "#fbbf24" }}>
-                  <Trophy className="w-8 h-8" />
-                </div>
+          {/* Section Header */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-16">
+            <div>
+              <p className="text-[#52b788] text-sm font-bold uppercase tracking-widest mb-2">Recognition & Excellence</p>
+              <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight">Awards &<br />Honours</h2>
+            </div>
+            <div className="flex items-center gap-3 pb-1">
+              <div className="w-12 h-12 rounded-full bg-[#1b4332] flex items-center justify-center">
+                <Trophy className="w-6 h-6 text-white" />
+              </div>
               <div>
-                <div className="flex flex-wrap items-center gap-2 mb-2">
-                  <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ background: "rgba(245,158,11,0.2)", color: "#fbbf24" }}>MOST PRESTIGIOUS · 2000</span>
-                </div>
-                <h3 className="text-xl font-black text-white mb-2">Queen&apos;s Award for Forestry</h3>
-                <p className="text-sm leading-relaxed mb-1" style={{ color: "rgba(255,255,255,0.65)" }}>
-                  Winner of the prestigious Queen&apos;s Award for Forestry for the year 2000 from the Commonwealth Forestry Association UK.
-                </p>
-                <p className="text-sm italic leading-relaxed" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  &ldquo;For outstanding achievements in the field of Forest Policy, Development and Management especially for Participatory Forest Management which will contribute to the advancement of forestry within the Commonwealth.&rdquo;
-                </p>
+                <div className="text-3xl font-black text-[#1b4332]">15</div>
+                <div className="text-xs text-gray-400 font-medium">Recognitions</div>
               </div>
             </div>
           </div>
 
-          {/* EMPI Award — featured */}
-          <div className="relative rounded-2xl p-6 mb-6 overflow-hidden border" style={{ background: "linear-gradient(135deg, rgba(251,113,133,0.08), rgba(251,113,133,0.04))", borderColor: "rgba(251,113,133,0.2)" }}>
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" style={{ background: "rgba(251,113,133,0.15)", color: "#fb7185" }}>
-                  <Award className="w-7 h-7" />
+          {/* ── HERO: Queen's Award ── */}
+          <div className="relative rounded-3xl overflow-hidden mb-6 bg-[#0a1a14]">
+            {/* Decorative background pattern */}
+            <div className="absolute inset-0">
+              <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20" style={{ background: "#52b788", transform: "translate(30%,-30%)" }} />
+              <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full blur-3xl opacity-10" style={{ background: "#2d6a4f", transform: "translate(-30%,30%)" }} />
+              <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
+            </div>
+            <div className="relative z-10 p-8 sm:p-12">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                {/* Left: Big trophy icon */}
+                <div className="shrink-0">
+                  <div className="w-24 h-24 rounded-3xl bg-white/10 border border-white/20 flex items-center justify-center">
+                    <Trophy className="w-12 h-12 text-white" />
+                  </div>
                 </div>
-              <div>
-                <span className="text-xs font-bold px-2.5 py-1 rounded-full mb-2 inline-block" style={{ background: "rgba(251,113,133,0.15)", color: "#fb7185" }}>INNOVATION · 2007</span>
-                <h3 className="text-lg font-black text-white mb-1">EMPI–Indian Express Innovation Award 2006</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.6)" }}>
-                  As Managing Director of the Tripura Forest Development Corporation, received the EMPI-Indian Express Innovation Award 2006 from the former President of India Shri APJ Abdul Kalam on 22nd December 2007 in New-Delhi for bringing in innovations and enthusing corporate culture in the working of the Corporation turning it into a profit making enterprise from a loss making entity. The Board of Directors of the Tripura Forest Development &amp; Plantation Corporation commended the efforts of the Managing Director in the 98th Board Meeting for providing exemplary leadership and infusing innovative ideas leading to diversification and turning around the fortune of the Company. The net profit has crossed to more than 600% within a period of 3 years. The Corporation is providing livelihood to more than 15,000 families in the rural and tribal areas.
-                </p>
+                {/* Right: Content */}
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#52b788]/20 text-[#52b788] border border-[#52b788]/30 uppercase tracking-wider">Most Prestigious</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-white/60">2000</span>
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-white/60">Commonwealth Forestry Association, UK</span>
+                  </div>
+                  <h3 className="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight">Queen&apos;s Award<br />for Forestry</h3>
+                  <p className="text-white/70 leading-relaxed mb-4 max-w-2xl">
+                    Winner of the prestigious Queen&apos;s Award for Forestry for the year 2000 from the Commonwealth Forestry Association UK.
+                  </p>
+                  <blockquote className="border-l-4 border-[#52b788] pl-4">
+                    <p className="text-white/50 italic text-sm leading-relaxed">
+                      &ldquo;For outstanding achievements in the field of Forest Policy, Development and Management especially for Participatory Forest Management which will contribute to the advancement of forestry within the Commonwealth.&rdquo;
+                    </p>
+                  </blockquote>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Grid of remaining awards */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* ── EMPI Award — wide card ── */}
+          <div className="relative rounded-3xl overflow-hidden mb-10 border-2 border-[#1b4332]/10 bg-gradient-to-br from-[#f0faf5] to-white">
+            <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#1b4332]" />
+            <div className="p-8 sm:p-10 pl-10">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                <div className="shrink-0 w-16 h-16 rounded-2xl bg-[#1b4332] flex items-center justify-center">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#1b4332] text-white uppercase tracking-wider">Innovation Award</span>
+                    <span className="text-xs text-gray-400 font-mono">Presented by President APJ Abdul Kalam · 22 Dec 2007</span>
+                  </div>
+                  <h3 className="text-2xl font-black text-gray-900 mb-3">EMPI–Indian Express Innovation Award 2006</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    As Managing Director of the Tripura Forest Development Corporation, received the EMPI-Indian Express Innovation Award 2006 from the former President of India Shri APJ Abdul Kalam on 22nd December 2007 in New-Delhi for bringing in innovations and enthusing corporate culture in the working of the Corporation turning it into a profit making enterprise from a loss making entity. The Board of Directors of the Tripura Forest Development &amp; Plantation Corporation commended the efforts of the Managing Director in the 98th Board Meeting for providing exemplary leadership and infusing innovative ideas leading to diversification and turning around the fortune of the Company. The net profit has crossed to more than 600% within a period of 3 years. The Corporation is providing livelihood to more than 15,000 families in the rural and tribal areas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Remaining 12 awards — editorial list ── */}
+          <div className="grid sm:grid-cols-2 gap-0 border-t-2 border-gray-100">
             {[
-              { icon: <Globe2 className="w-5 h-5" />, year: "2012", title: "Vice-Chairman, Asia-Pacific Forestry Organization", desc: "Elected as Vice-Chairman of Asia-Pacific Forestry Organization on 30th August 2012 at Guangzhou, China.", color: "#38bdf8" },
-              { icon: <Users className="w-5 h-5" />, year: "2012", title: "Executive Committee, IPC (UN/FAO)", desc: "Elected as Executive Committee of International Poplar Commission a UN/FAO body on 4th November 2012 at Dehradun.", color: "#a78bfa" },
-              { icon: <Mic2 className="w-5 h-5" />, year: "2012", title: "FAO World Forestry Week — Chair", desc: "Invited to and chaired a Technical session on 24th September 2012 at the FAO Rome in World Forestry Week during Committee on Forestry (COFO) meet of FAO.", color: "#34d399" },
-              { icon: <ScrollText className="w-5 h-5" />, year: "2005", title: "Commendation — Govt. of Tripura", desc: "The Government of Tripura issued a Commendation letter in November 2005 for making outstanding efforts in forest management planning and administration.", color: "#52b788" },
-              { icon: <Mic2 className="w-5 h-5" />, year: "2001", title: "Key-note — 16th Commonwealth Forestry Conference", desc: "Delivered Key-note address in the 16th Commonwealth Forestry Conference in Perth (Australia) in April 2001.", color: "#38bdf8" },
-              { icon: <Mountain className="w-5 h-5" />, year: "2012", title: "Uttarakhand Ratan", desc: "Awarded Uttarakhand Ratan in 2012 by the All India Intellectual Federation for achieving excellence in academics, research and administrator for the demonstrated benefits accrued to the society.", color: "#52b788" },
-              { icon: <Flag className="w-5 h-5" />, year: "2013", title: "Great Son of India Award", desc: "Awarded Great Son of India Award 2013 on 22nd December 2013 by the All India Intellectual Federation for achieving success as people centric civil servant.", color: "#fb7185" },
-              { icon: <Gem className="w-5 h-5" />, year: "–", title: "Udhog Ratan", desc: "Awarded Udhog Ratan by Institute of Economic Growth, New-Delhi.", color: "#e9c46a" },
-              { icon: <Medal className="w-5 h-5" />, year: "1988", title: "2nd Position — M.Sc. Resource Management", desc: "Awarded a class prize for scoring 2nd position in the University in M.Sc. (Resource Management) examination (1988), University of Edinburgh, UK.", color: "#94a3b8" },
-              { icon: <Crown className="w-5 h-5" />, year: "1975", title: "1st Position — M.Sc. Zoology", desc: "A class prize for securing first position in the University in M.Sc. (Zoology) examination (1975) of the Garhwal University, Srinagar (Garhwal), UP.", color: "#fbbf24" },
-              { icon: <Award className="w-5 h-5" />, year: "1981", title: "R.S. Mathur Prize", desc: "R. S. Mathur Prize in the final examination of 1979-1981 course of Associate of Indian Forest College (AIFC), at the Indian Forest College, Dehra Dun.", color: "#a78bfa" },
-              { icon: <Newspaper className="w-5 h-5" />, year: "1986–89", title: "Seth Memorial & Brandis Memorial Prizes", desc: "Awarded Seth Memorial (during 1986 & 1989) and Brandis Memorial Prizes (during 1987 & 1989) for writing best research papers/photography for the respective years in the Journal 'Indian Forester'.", color: "#34d399" },
-            ].map((a) => (
+              { icon: <Globe2 className="w-5 h-5" />, year: "2012", title: "Vice-Chairman, Asia-Pacific Forestry Organization", desc: "Elected as Vice-Chairman of Asia-Pacific Forestry Organization on 30th August 2012 at Guangzhou, China." },
+              { icon: <Users className="w-5 h-5" />, year: "2012", title: "Executive Committee, IPC (UN/FAO)", desc: "Elected as Executive Committee of International Poplar Commission a UN/FAO body on 4th November 2012 at Dehradun." },
+              { icon: <Mic2 className="w-5 h-5" />, year: "2012", title: "FAO World Forestry Week — Chair", desc: "Invited to and chaired a Technical session on 24th September 2012 at the FAO Rome in World Forestry Week during Committee on Forestry (COFO) meet of FAO." },
+              { icon: <ScrollText className="w-5 h-5" />, year: "2005", title: "Commendation — Govt. of Tripura", desc: "The Government of Tripura issued a Commendation letter in November 2005 for making outstanding efforts in forest management planning and administration." },
+              { icon: <Mic2 className="w-5 h-5" />, year: "2001", title: "Key-note — 16th Commonwealth Forestry Conference", desc: "Delivered Key-note address in the 16th Commonwealth Forestry Conference in Perth (Australia) in April 2001." },
+              { icon: <Mountain className="w-5 h-5" />, year: "2012", title: "Uttarakhand Ratan", desc: "Awarded Uttarakhand Ratan in 2012 by the All India Intellectual Federation for achieving excellence in academics, research and administrator for the demonstrated benefits accrued to the society." },
+              { icon: <Flag className="w-5 h-5" />, year: "2013", title: "Great Son of India Award", desc: "Awarded Great Son of India Award 2013 on 22nd December 2013 by the All India Intellectual Federation for achieving success as people centric civil servant." },
+              { icon: <Gem className="w-5 h-5" />, year: "–", title: "Udhog Ratan", desc: "Awarded Udhog Ratan by Institute of Economic Growth, New-Delhi." },
+              { icon: <Medal className="w-5 h-5" />, year: "1988", title: "2nd Position — M.Sc. Resource Management", desc: "Awarded a class prize for scoring 2nd position in the University in M.Sc. (Resource Management) examination (1988), University of Edinburgh, UK." },
+              { icon: <Crown className="w-5 h-5" />, year: "1975", title: "1st Position — M.Sc. Zoology", desc: "A class prize for securing first position in the University in M.Sc. (Zoology) examination (1975) of the Garhwal University, Srinagar (Garhwal), UP." },
+              { icon: <Award className="w-5 h-5" />, year: "1981", title: "R.S. Mathur Prize", desc: "R. S. Mathur Prize in the final examination of 1979-1981 course of Associate of Indian Forest College (AIFC), at the Indian Forest College, Dehra Dun." },
+              { icon: <Newspaper className="w-5 h-5" />, year: "1986–89", title: "Seth Memorial & Brandis Memorial Prizes", desc: "Awarded Seth Memorial (during 1986 & 1989) and Brandis Memorial Prizes (during 1987 & 1989) for writing best research papers/photography for the respective years in the Journal 'Indian Forester'." },
+            ].map((a, i) => (
               <div key={a.title}
-                className="rounded-xl p-5 border transition-all hover:-translate-y-1 hover:shadow-lg"
-                style={{ background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.07)" }}>
-                <div className="flex items-start gap-3">
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0"
-                    style={{ background: `${a.color}15`, color: a.color }}>
+                className={`group flex items-start gap-5 p-6 border-b-2 border-gray-100 hover:bg-[#f0faf5] transition-colors ${i % 2 === 0 ? "sm:border-r-2" : ""}`}>
+                {/* Number */}
+                <div className="shrink-0 flex flex-col items-center gap-2">
+                  <div className="w-10 h-10 rounded-xl bg-[#1b4332]/8 group-hover:bg-[#1b4332] transition-colors flex items-center justify-center text-[#1b4332] group-hover:text-white">
                     {a.icon}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full"
-                        style={{ background: `${a.color}15`, color: a.color }}>{a.year}</span>
-                    </div>
-                    <h4 className="text-sm font-bold text-white mb-1 leading-snug">{a.title}</h4>
-                    <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.45)" }}>{a.desc}</p>
-                  </div>
+                  <span className="text-[10px] font-black text-gray-300 font-mono">{a.year}</span>
+                </div>
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-sm font-bold text-gray-900 mb-1 leading-snug group-hover:text-[#1b4332] transition-colors">{a.title}</h4>
+                  <p className="text-xs text-gray-500 leading-relaxed">{a.desc}</p>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 

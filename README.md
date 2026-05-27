@@ -92,5 +92,4 @@ pnpm start
 ## Author
 
 **Dr. V.K. Bahuguna**  
-Chairman, Centre for Resource Management & Environment (CRE) and Ujan Vikas Manch  
-Contact: bahugunaifs@gmail.com · 9810405137 / 9412057333
+Chairman, Centre for Resource Management & Environment (CRE) and Ujan Vikas Manch
