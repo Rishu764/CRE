@@ -1,7 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+  tls: {
+    rejectUnauthorized: false,
+  },
+});
 
 export async function POST(req: NextRequest) {
   try {
@@ -16,9 +27,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
     }
 
-    const { data, error } = await resend.emails.send({
-      from: "CRE Contact Form <onboarding@resend.dev>",
-      to: ["ayushbutola200@gmail.com"],
+    await transporter.sendMail({
+      from: `"CRE Contact Form" <${process.env.GMAIL_USER}>`,
+      to: process.env.GMAIL_USER,
       replyTo: email,
       subject: `[CRE Contact] ${subject}`,
       html: `
@@ -47,16 +58,10 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    if (error) {
-      console.error("Resend error:", JSON.stringify(error));
-      return NextResponse.json({ error: error.message ?? "Failed to send email." }, { status: 500 });
-    }
-
-    console.log("Email sent, id:", data?.id);
-
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (err) {
-    console.error("Contact API error:", err);
-    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
+  } catch (err: unknown) {
+    const errorMessage = err instanceof Error ? err.message : "Unknown error";
+    console.error("Contact API error:", errorMessage, err);
+    return NextResponse.json({ error: `Failed to send email: ${errorMessage}` }, { status: 500 });
   }
 }
