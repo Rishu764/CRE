@@ -151,8 +151,24 @@ html {
 
 /* Section divider */
 .section-divider {
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  width: 40px;
+  height: 2px;
+  background: var(--primary);
   border-radius: 2px;
+}
+
+/* Fade in on scroll — used with IntersectionObserver or CSS */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  animation: reveal-up 0.6s ease-out forwards;
 }

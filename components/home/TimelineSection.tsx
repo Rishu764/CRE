@@ -304,9 +304,9 @@ export default function TimelineSection() {
               </div>
 
               {/* Progress bar */}
-              <div className="w-full max-w-md h-1 bg-white/10 rounded-full overflow-hidden">
+              <div className="w-full max-w-md h-px bg-white/10 overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-[#52b788] to-[#e9c46a] rounded-full transition-all duration-500"
+                  className="h-full bg-[#52b788] transition-all duration-500"
                   style={{
                     width: `${((activeIndex + 1) / timelineData.length) * 100}%`,
                   }}
@@ -339,7 +339,7 @@ export default function TimelineSection() {
                 {item.year}
                 {/* Active indicator */}
                 {index === activeIndex && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#52b788] to-[#e9c46a]" />
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#52b788]" />
                 )}
               </button>
             ))}
