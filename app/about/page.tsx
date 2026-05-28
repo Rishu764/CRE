@@ -88,7 +88,7 @@ export default function AboutPage() {
             <div className="lg:col-span-2">
               <div className="rounded-2xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/trible.png" alt="Tribal community empowerment" className="w-full h-[350px] object-cover" />
+                <img src="/mission.png" alt="Tribal community empowerment" className="w-full h-[350px] object-cover" />
               </div>
             </div>
             {/* Text Side */}
@@ -145,7 +145,7 @@ export default function AboutPage() {
             <div className="lg:col-span-2 order-1 lg:order-2">
               <div className="rounded-2xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/meeting.png" alt="Community meetings and workshops" className="w-full h-[350px] object-cover" />
+                <img src="/vision.png" alt="Community meetings and workshops" className="w-full h-[350px] object-cover" />
               </div>
             </div>
           </div>
