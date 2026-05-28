@@ -17,10 +17,10 @@ export default function WorkshopHighlight() {
 
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
               International Workshop on{" "}
-              <span className="gradient-text">
+              <span className="text-primary">
                 Combating Climate Change
               </span>{" "}
-              in South Asia & East Africa
+              in South Asia &amp; East Africa
             </h2>
 
             <p className="text-text-muted leading-relaxed">
