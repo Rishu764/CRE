@@ -3,82 +3,70 @@ import Link from "next/link";
 
 export default function AboutPreview() {
   return (
-    <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
-      {/* Subtle background decoration */}
-      <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-emerald-50 rounded-full blur-3xl opacity-60 -translate-y-1/2" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-50 rounded-full blur-3xl opacity-50" />
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left - Visual with Mission Statement */}
-          <div className="relative">
-            {/* Main mission card */}
-            <div className="relative bg-gradient-to-br from-emerald-900 to-emerald-800 rounded-3xl p-8 lg:p-10 text-white overflow-hidden">
-              {/* Decorative pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <pattern id="about-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-                      <circle cx="15" cy="15" r="1" fill="white" />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#about-dots)" />
-                </svg>
-              </div>
-
+          {/* Left — Mission block */}
+          <div className="space-y-5">
+            {/* Mission card — solid dark green, clean */}
+            <div className="relative bg-[#1b4332] rounded-2xl p-8 lg:p-10 text-white overflow-hidden">
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full border border-white/20 mb-6">
-                  <Leaf className="w-4 h-4 text-emerald-300" />
-                  <span className="text-xs font-semibold text-emerald-200 uppercase tracking-wider">Our Mission</span>
+                <div className="flex items-center gap-2 mb-6">
+                  <Leaf className="w-4 h-4 text-[#52b788]" />
+                  <span className="text-xs font-bold text-[#52b788] uppercase tracking-widest">
+                    Our Mission
+                  </span>
                 </div>
 
-                <blockquote className="text-xl sm:text-2xl lg:text-3xl font-bold leading-snug mb-6">
-                  &ldquo;Inforce the concept of resource management and work for environmental conservation and mitigate climate change.&rdquo;
+                <blockquote className="text-xl sm:text-2xl font-semibold leading-snug text-white mb-6">
+                  &ldquo;Inforce the concept of resource management and work for
+                  environmental conservation and mitigate climate change.&rdquo;
                 </blockquote>
 
-                <div className="w-16 h-1 bg-gradient-to-r from-emerald-400 to-amber-400 rounded-full mb-6" />
+                <div className="w-10 h-0.5 bg-[#e9c46a] mb-5" />
 
-                <p className="text-white/70 text-sm leading-relaxed">
-                  — Centre for Resource Management & Environment (CRE), Est. 2011
+                <p className="text-white/45 text-sm">
+                  — Centre for Resource Management &amp; Environment (CRE), Est. 2011
                 </p>
               </div>
-
-              {/* Corner decoration */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-600/30 rounded-full blur-2xl" />
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-amber-500/20 rounded-full blur-2xl" />
             </div>
 
-            {/* Three floating mini cards below */}
-            <div className="grid grid-cols-3 gap-3 mt-4">
-              <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-center hover:-translate-y-1 transition-transform">
-                <Leaf className="w-6 h-6 text-emerald-600 mx-auto mb-2" />
-                <span className="text-xs font-semibold text-emerald-800">Resource Mgmt</span>
-              </div>
-              <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 text-center hover:-translate-y-1 transition-transform">
-                <Globe className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                <span className="text-xs font-semibold text-blue-800">Conservation</span>
-              </div>
-              <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 text-center hover:-translate-y-1 transition-transform">
-                <Shield className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-                <span className="text-xs font-semibold text-amber-800">Climate Action</span>
-              </div>
+            {/* Three pillars — single color, clean */}
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { icon: Leaf, label: "Resource Mgmt" },
+                { icon: Globe, label: "Conservation" },
+                { icon: Shield, label: "Climate Action" },
+              ].map(({ icon: Icon, label }) => (
+                <div
+                  key={label}
+                  className="border border-gray-100 rounded-xl p-4 text-center hover:border-[#2d6a4f]/30 hover:bg-[#2d6a4f]/5 transition-colors"
+                >
+                  <Icon className="w-5 h-5 text-[#2d6a4f] mx-auto mb-2" />
+                  <span className="text-xs font-semibold text-gray-700">{label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Registration note */}
+            <div className="flex items-center gap-3 pt-1">
+              <div className="w-8 h-px bg-gray-200" />
+              <span className="text-xs text-gray-400 font-medium">
+                Registered under Indian Trust Act, 1882 · Sec. 12A · 80G
+              </span>
             </div>
           </div>
 
-          {/* Right - Content */}
-          <div className="space-y-6">
+          {/* Right — Content */}
+          <div className="space-y-7 lg:pt-2">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-200 rounded-full mb-3">
-                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                <span className="text-sm font-semibold text-emerald-700 uppercase tracking-wider">
-                  About CRE
-                </span>
-              </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 leading-tight">
+              <span className="text-xs font-bold text-[#2d6a4f] uppercase tracking-widest">
+                About CRE
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 leading-tight">
                 People-Centric Solutions for{" "}
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
-                  Environmental Challenges
-                </span>
+                <span className="text-[#2d6a4f]">Environmental Challenges</span>
               </h2>
             </div>
 
@@ -90,7 +78,8 @@ export default function AboutPreview() {
               empowerment, and direct engagement with policy makers.
             </p>
 
-            <div className="space-y-3 bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            {/* Key points */}
+            <div className="space-y-3 border border-gray-100 rounded-xl p-6 bg-gray-50/50">
               {[
                 "Self-sustained operations without external grants",
                 "Direct grassroots engagement across 10+ states",
@@ -98,7 +87,7 @@ export default function AboutPreview() {
                 "International collaboration on climate change",
               ].map((point) => (
                 <div key={point} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <CheckCircle className="w-4 h-4 text-[#2d6a4f] shrink-0 mt-0.5" />
                   <span className="text-sm text-gray-700">{point}</span>
                 </div>
               ))}
@@ -106,7 +95,7 @@ export default function AboutPreview() {
 
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-semibold rounded-full hover:bg-emerald-700 transition-all shadow-md hover:shadow-lg group"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#1b4332] text-white text-sm font-semibold rounded-lg hover:bg-[#2d6a4f] transition-colors group"
             >
               Read Our Full Story
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

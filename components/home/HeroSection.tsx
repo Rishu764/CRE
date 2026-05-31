@@ -105,7 +105,6 @@ export default function HeroSection() {
                 }`}
               >
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8">
-                  <span className="w-2 h-2 bg-secondary-light rounded-full animate-pulse" />
                   <span className="text-sm font-medium text-white/90">
                     {slide.badge}
                   </span>
@@ -140,25 +139,21 @@ export default function HeroSection() {
 
                 {/* Trust Credentials */}
                 <div className="flex flex-wrap gap-2">
-                  <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white backdrop-blur-sm border border-white/20" style={{ background: "rgba(255,255,255,0.1)" }}>
-                    <span className="w-2 h-2 rounded-full" style={{ background: "#34d399" }} />
-                    Indian Trust Act, 1882
-                  </span>
-                  <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white backdrop-blur-sm border border-white/20" style={{ background: "rgba(255,255,255,0.1)" }}>
-                    <span className="w-2 h-2 rounded-full" style={{ background: "#fbbf24" }} />
-                    Sec. 12A Certified
-                  </span>
-                  <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white backdrop-blur-sm border border-white/20" style={{ background: "rgba(255,255,255,0.1)" }}>
-                    <span className="w-2 h-2 rounded-full" style={{ background: "#fbbf24" }} />
-                    80G Tax Exemption
-                  </span>
-                  <span
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold border"
-                    style={{ background: "rgba(82,183,136,0.2)", borderColor: "rgba(82,183,136,0.5)", color: "#6ee7b7" }}
-                  >
-                    <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#52b788" }} />
-                    Open to Funding
-                  </span>
+                  {[
+                    "Indian Trust Act, 1882",
+                    "Sec. 12A Certified",
+                    "80G Tax Exemption",
+                    "Open to Funding",
+                  ].map((cred) => (
+                    <span
+                      key={cred}
+                      className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold text-white backdrop-blur-sm border border-white/20"
+                      style={{ background: "rgba(255,255,255,0.1)" }}
+                    >
+                      {/* <span className="w-1.5 h-1.5 rounded-full bg-[#52b788]" /> */}
+                      {cred}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
