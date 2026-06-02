@@ -213,6 +213,21 @@ export default function AboutPage() {
                 <p>
                   <strong>a)</strong> The Trust created a group of 235 Tribal artisans from different parts of the country and in coordination jointly with the ladies club of Forest Research Institute (FRI) created an outlet and Prerna self help group at FRI campus for sale of their products. The self help group put up a stall during International Poplar Convention during 30th October 2012 to 2nd November 2012 where the delegated of 35 countries purchased the items of the tribal and rural people and handicraft and other items worth more than 6 lakh Rupees was sold. The Prerna self help gave tremendous boost to the income of artisan as middle traders were removed. It also gave a fillip to forest conservation as most of the artisans were members of the Joint Forest Management Committees and Tribal sub groups. The work was appreciated by then Advisor to Prime Minister Shri TKA Nair and the then Chief Minister of Punjab Mr Prakash Singh Badal.
                 </p>
+
+                {/* Images for section a */}
+                <div className="grid grid-cols-2 gap-3 my-4">
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/trible.png" alt="Tribal artisan at work" className="w-full h-52 object-cover" />
+                    <p className="text-xs text-gray-500 mt-1 px-1">A Tribal artisan at work</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/trible02.png" alt="Tribal artisans at the International Poplar Convention stall" className="w-full h-52 object-cover" />
+                    <p className="text-xs text-gray-500 mt-1 px-1">Tribal artisans at the International Poplar Convention stall</p>
+                  </div>
+                </div>
+
                 <p>
                   <strong>b)</strong> The Trust also organized a training programme for the Bamboo jewellery making for the 30 ladies self help groups from Uttarakhand. For this the Bamboo artist of Assam Ms Neera Sharma was invited to train the artisans.
                 </p>
@@ -233,6 +248,25 @@ export default function AboutPage() {
                 <p>
                   The Trust also organized Van Mahotsav during July 2013 Jirania and again in July 2014 at Udaipur. The Trust created a self help group of ladies for spreading awareness for wild life conservation and improvements in handicraft by treating the Bamboo species. For this the help of Indian Council of Forestry Research and Education&apos;s (ICFRE) Agartala Centre was taken. The feedback from people who were trained in Bamboo treatment was very good. These artisans were later on engaged by the Tripura Forest Corporation for making Bamboo furniture and are now earning good money.
                 </p>
+
+                {/* Photo Gallery */}
+                <div className="grid grid-cols-3 gap-3 mt-4">
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/jwellery.png" alt="Tribal jewellery making training" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Jewellery making training, Tripura</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/craft-making.png" alt="Craft making session" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Craft making session, Kanchanpur</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/machine.png" alt="Bamboo processing machine" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Bamboo processing, ICFRE Agartala</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -262,6 +296,25 @@ export default function AboutPage() {
                 <p>
                   <strong>e)</strong> The Chairman was also invited by various agencies like Karnataka&apos;s Jungle and Lodges Corporation to deliver lecture on Ecotourism to the officers of Indian Forest Service (IFS); by Indian Institute of Forest Management Bhopal on livelihood policies; and as Chief Guest by Amity University on role of Non Timber Forest Products and Handicrafts in rural income generation; and by Indira Gandhi National Forest Academy as Chief Guest for the mid career training course for the IFS officers. The Government of India, Ministry of Environment, Forest and Climate Change appointed the Chairman as Member of the Indian Council of Forestry Research and Education (ICFRE) Society the top policy making body headed by the Minister of Environment, Forest and Climate Change. He was also appointed as President of India&apos;s nominee in the Executive Council of the Kashmir Central University by the President of India.
                 </p>
+
+                {/* Images for 2014-2018 */}
+                <div className="grid grid-cols-3 gap-3 my-4">
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/meeting_uk_agriculture_minister.png" alt="With Uttarakhand Agriculture Minister Subodh Uniyal, 28th May 2017" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">With Uttarakhand Agriculture Minister Subodh Uniyal, 28th May 2017 — Inauguration of Ganoderma Lab</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/mushroom_growers.png" alt="Meeting with mushroom growers July 2018" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Meeting with Mushroom Growers, July 2018</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/mission.png" alt="Meeting with self help group Nov 2016" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Meeting with self help group, Nov 2016</p>
+                  </div>
+                </div>
               </div>
             </div>
 
