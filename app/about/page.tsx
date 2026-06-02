@@ -350,6 +350,45 @@ export default function AboutPage() {
                 <p>
                   Apart from these the Chairman Dr VK Bahuguna on 12th October was invited and addressed online the IAS and Tripura Civil Services trainees at State Institute of Public Administration Agartala Tripura on present status of Agriculture in the country.
                 </p>
+
+                {/* Image for 2018-2020 */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/meeting.png" alt="Meeting with Jabalpur Environment Group" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Meeting with Jabalpur Environment Group on 15th October 2020</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/vision.png" alt="With Paryavaran Club Jabalpur on 16th October 2020" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">With Paryavaran Club Jabalpur on 16th October 2020</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/villagers.png" alt="Meeting with villagers at Dabra Kurd" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Meeting with villagers at Dabra Kurd (Jabalpur Forest Division) on 18th October 2020 on Forest Right Act and Farmers issues.</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/villagers_02.png" alt="Meeting with villagers at Dabra Kurd on 18th October on Forest Right Act and agriculture" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Meeting with villagers at Dabra Kurd on 18th October on Forest Right Act and agriculture</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/meeting02.png" alt="Meeting with Baiga Tribal on Forest Right Act problems" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Meeting with Baiga Tribal on Forest Right Act problems and Mr Alok Misra and Mr Bharat Namdeo at Daguna village of Dindori District on 8th November 2020</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/villagers_03.png" alt="Baiga women at Daguna 8th November 2020" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Baiga women at Daguna 8th November 2020</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/about_us_hero.png" alt="In a farmers field in Dindori District with Bharat Vikas Parishad President Mr Alok Misra" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">In a farmers field in Dindori District with Bharat Vikas Parishad President Mr Alok Misra</p>
+                  </div>
+                </div>
               </div>
             </div>
 
