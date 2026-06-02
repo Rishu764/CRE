@@ -427,6 +427,30 @@ export default function AboutPage() {
                 <p>
                   The Chairman has taken up issues in social media and twitter on the problems of the people. He has specially taken up the issue of unusual voter increase in Uttarakhand during last ten years with the Prime Minister and Election Commission. The Election Commission had set up committees to inquire into the matter in details. The reports are awaited. The Centre had also taken up issues of drugs and encroachment of forest lands and other government lands. The Uttarakhand government had on Centre&apos;s taking up the matter had started demolition of encroached structures.
                 </p>
+
+                {/* Image for 2021-2023 */}
+                <div className="grid grid-cols-2 gap-3 mt-4">
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/vk_bahuguna_speech.png" alt="Dr. VK Bahuguna addressing a session" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Dr. VK Bahuguna addressing a session on Climate Change and Disasters, Uttarakhand Administrative Academy, Nainital, 5th November 2023</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/meeting03.png" alt="Discussing with Tribal People in Mysore, Karnataka" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Discussing with Tribal People in Mysore, Karnataka</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/amity.png" alt="Chief Guest at Amity University seminar" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Chief Guest at Amity University — &quot;Trees are our Best Friend&quot;, 7th July 2023</p>
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/dg_uk.png" alt="With DG Uttarakhand Administrative Academy" className="w-full h-44 object-cover hover:scale-105 transition-transform duration-300" />
+                    <p className="text-xs text-gray-500 mt-1.5 text-center">Chairing session on Climate Change and Disasters, Uttarakhand Administrative Academy, Nainital</p>
+                  </div>
+                </div>
               </div>
             </div>
 
