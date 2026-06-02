@@ -175,10 +175,10 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-black text-gray-900 mb-2">Dr. V.K. Bahuguna</h3>
                   <p className="text-[#52b788] font-semibold mb-4">Chairman, CRE & Ujan Vikas Manch</p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                    Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University. Winner of the prestigious Queen's Award for Forestry (2000) from Commonwealth Forestry Association, UK.
+                    Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University. Winner of the prestigious Queen&apos;s Award for Forestry (2000) from Commonwealth Forestry Association, UK.
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {["IFS 1979", "Former DG ICFRE", "Queen's Award Winner", "Presidential Nominee"].map(tag => (
+                    {["Indian Forest Service (IFS) 1979", "Former DG ICFRE", "Queen's Award Winner", "Presidential Nominee"].map(tag => (
                       <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-[#52b788]/10 text-[#1b4332]">{tag}</span>
                     ))}
                   </div>
