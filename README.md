@@ -92,4 +92,4 @@ pnpm start
 ## Author
 
 **Dr. V.K. Bahuguna**  
-Chairman, Centre for Resource Management & Environment (CRE) and Ujan Vikas Manch
+Chairman, Centre for Resource Management & Environment (CRE) and Jan Vikas Manch

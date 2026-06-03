@@ -162,23 +162,105 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
-              <div className="flex flex-col sm:flex-row gap-8 items-start">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
                 <div className="shrink-0">
-                  <div className="w-32 h-32 rounded-2xl overflow-hidden ring-4 ring-[#52b788]/20">
+                  <div className="w-40 h-40 rounded-2xl overflow-hidden ring-4 ring-[#52b788]/20">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/author.png" alt="Dr. V.K. Bahuguna" className="w-full h-full object-cover object-top" />
                   </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-black text-gray-900 mb-2">Dr. V.K. Bahuguna</h3>
-                  <p className="text-[#52b788] font-semibold mb-4">Chairman, CRE & Ujan Vikas Manch</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                    Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University. Winner of the prestigious Queen&apos;s Award for Forestry (2000) from Commonwealth Forestry Association, UK.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {["Indian Forest Service (IFS) 1979", "Former DG ICFRE", "Queen's Award Winner", "Presidential Nominee"].map(tag => (
+                
+                <div className="flex-1 space-y-6">
+                  {/* Header */}
+                  <div>
+                    <h3 className="text-3xl font-black text-gray-900 mb-2">Dr. V.K. Bahuguna</h3>
+                    <p className="text-[#52b788] font-semibold text-lg mb-4">Chairman, Centre for Resource Management and Environment (CRE) & Jan Vikas Manch</p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University. Winner of the prestigious Queen&apos;s Award for Forestry (2000) from Commonwealth Forestry Association, UK.
+                    </p>
+                  </div>
+
+                  {/* Post-Retirement Professional & Social Work */}
+                  <div>
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Post-Retirement Professional & Social Work</h4>
+                    <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+                      <p><strong>1.</strong> After resigning from his post retirement job in Tripura Dr Bahuguna fruitfully engaged himself in social and professional work. First of all he became a columnist for the National Newspapers particularly the English Daily Pioneer and so far in various newspapers he had contributed almost 600 Articles of a range of topics from governance to defence to strategic affairs to livelihoods of people to Environment, Forest and Climate Change and Tribal affairs.</p>
+                      
+                      <p><strong>2.</strong> He established the Uttarakhand Jan Vikas Manch in the year 2015 and helped create a federation of Non Govt organizations who worked in the field of rural livelihood.</p>
+                      
+                      <p><strong>3.</strong> In 2018 he took over the not for profit Trust Centre for Resource Management and Environment raised several issues relating to transparent governance on rural livelihood, environment and forest conservation and through his efforts a large number of people got justice. He helped poor through his tweets and taking up matters with govt authorities.</p>
+                      
+                      <p><strong>4.</strong> In the govt sector he was appointed as Member of the Indian Council of Forestry Research and Education (ICFRE) Society in the year 2018 by the Ministry of Environment Forest and Climate Change for a period of 3 years. ICFRE Society is the top policy making body of govt of India relating to Forestry Research Education and Extension and is Chaired by Union Environment Minister.</p>
+                      
+                      <p><strong>5.</strong> The President of India who is the visitor of Central University of Kashmir in February 2019 appointed Dr VK Bahuguna as his representative in the Executive Committee and University Court of Kashmir Central University for a period of 3 years. In this position held helped the nascent central University in initial years to take several decisions.</p>
+                      
+                      <p><strong>6.</strong> Accepted the position of Chairman Kalpvriksh Foundation a dedicated forum created for serving the Indian Cow by Mr Vaishnav Charan Das.</p>
+                      
+                      <p><strong>7.</strong> President of Apni Dharohar Society of Uttarakhand. But resigned after some time to focus on genuine issues at hand relating to Resource Management in the country.</p>
+                      
+                      <p><strong>8.</strong> Was nominated as Member of the Task Force on Tribal Affairs by the Commission on Scheduled Tribe during 2021 to 2023</p>
+                      
+                      <p><strong>9.</strong> Assisted the Vanvasi Kalyan Ashram on assessing the impact of Forest Right Act in Karnataka during the year 2024.</p>
+                      
+                      <p><strong>10.</strong> Chaired a session in Policy issues in the International Conference on Wildlife arranged by Govt of Madhya Pradesh. Apart from this Chaired conference on Disaster management and other issues organized by State Academy of Administration Nainital.</p>
+                      
+                      <p><strong>11.</strong> Has been interacting with officers of Indian Administrative Service (IAS) at the Lal Bahadur Academy of Administration Mussoorie; with Indian Forest Service (IFS) officers and Probationers at the Indira Gandhi Forest Academy Dehradun and Student and Faculty of Indian Institute of Forest Management.</p>
+                      
+                      <p><strong>12.</strong> Organised an International Conference on Climate Change in Asia and Africa during 29th April to 2nd May at Dehradun. It was attended by 76 participants from India, Nepal, Sri Lanka and Mauritius.</p>
+                      
+                      <p><strong>13.</strong> Making frequent visits to Tribal areas of Madhya Pradesh and Tripura and helping them to raise issues relevant for ensuring better livelihood, Environmental Conservation and people centric governance. Several articles helped the authorities to take action on suggested lines.</p>
+                      
+                      <p><strong>14.</strong> He is very active and has shown that without occupying powerful position still a lot can be done. He had Published during Corona lockdown two books. The First one is a compilation of his 99 selective Articles since 2015 till 2021 which can contribute a great deal in accountable and efficiently responsible Governance. The book is entitled: &quot;A Citizens Dream for his country- Making Indian Governance to Work&quot;. The Second Book is: &quot;Quest for Civility - an inside account of Indian Babudom&quot;. Both the books are available online in Amazon, Flipkart and other shops and also with Notion Press publisher Chennai.</p>
+                      
+                      <p><strong>15.</strong> As he deeply live the natural and cultural beauty and Ethos of India and Uttarakhand Dr Bahuguna considering the issue of ecological sustainability of mountains and its people and influx of outsiders leading to population explosion in Uttarakhand he had decided and became the National President of Uttarakhand Samanata Party so that a regional force is created to preserve the concept of Equality. Integrity of Uttarakhand and Help its youth in meeting their genuine needs. He had as President of the party had raised the issue of Delimitation and drug menace and jobs reservation for the youth of Uttarakhand in all private investments.</p>
+                    </div>
+                  </div>
+
+                  {/* Formal Positions */}
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-3">Dr. V.K. Bahuguna</h4>
+                    <div className="space-y-3 text-sm text-gray-700">
+                      <div>
+                        <h5 className="font-semibold text-gray-900 mb-2">A. Formerly:</h5>
+                        <div className="space-y-1 ml-4">
+                          <p>1. Director General Indian Council of Forestry Research and Education (ICFRE) & Chancellor Forest Research Institute (FRI) University Ministry of Environment, Forest and Climate Change Government of India;</p>
+                          <p>2. Principal Secretary and Additional Principal Chief Conservator (in Apex Scale) Departments of Agriculture, Horticulture, Forests, Animal Husbandry and Planning and Coordination and Economics Government of Tripura;</p>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h5 className="font-semibold text-gray-900 mb-2">B. Present:</h5>
+                        <div className="space-y-1 ml-4">
+                          <p>i) Chairman, Centre for Resource Management and Environment (a non profit registered Trust);</p>
+                          <p>ii) Chairman, Jan Vikas Manch, Uttarakhand (People&apos;s movement for livelihood and transparent governance)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Address */}
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Address</h4>
+                    <div className="text-sm text-gray-600 space-y-1">
+                      <p><strong>i) Noida:</strong> A 101, Jagdambe Apartments, C-58/25 Sector 62 NOIDA, UP-201309</p>
+                      <p><strong>Telefax:</strong> +91-120-4548664</p>
+                      <p><strong>Mobile:</strong> +91-9810405137 & +91-9412057333</p>
+                      <p><strong>ii) Dehradun:</strong> 281 Phase I Vasant Vihar Dehradun Uttarakhand Pin 248006</p>
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 pt-4">
+                    {[
+                      "Indian Forest Service (IFS) 1979", 
+                      "Former DG ICFRE", 
+                      "Queen's Award Winner", 
+                      "Presidential Nominee",
+                      "600+ Articles Published",
+                      "Author of 2 Books"
+                    ].map(tag => (
                       <span key={tag} className="px-3 py-1 rounded-full text-xs font-semibold bg-[#52b788]/10 text-[#1b4332]">{tag}</span>
                     ))}
                   </div>

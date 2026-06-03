@@ -141,7 +141,7 @@ export default function LeadershipPage() {
           <div className="relative mb-12">
             {[
               { year: "Present", period: "Present", title: "Columnist", org: "40 decades of writing on environment, climate change, tribal and rural development, and international and national issues", desc: "Though have been writing since after joining Indian Forest Service (IFS) in 1979 in National newspaper like Indian Express, Hindustan Times and later on in Financial Times, Statesman, Telegraph etc but after Superannuation have largely writing in the daily Pioneer after the famous Journalist and Editor of Pioneer Mr Chandan Mitra one of the oldest news papers of India, invited to write for his paper. Also write occasionally for Millennium Post and The Emerging India national papers. So far more than 600 articles published.", color: "#f59e0b" },
-              { year: "Present", period: "Present", title: "Chairman, Centre for Resource Management & Environment (CRE) and Ujan Vikas Manch", org: "", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers.", color: "#10b981" },
+              { year: "Present", period: "Present", title: "Chairman, Centre for Resource Management & Environment (CRE) and Jan Vikas Manch", org: "", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers.", color: "#10b981" },
               { year: "2013", period: "July 2013 till retirement and beyond. Reappointed on the same post but resigned after 7 months in April 2015", title: "Principal Secretary/later on designated as Agriculture Production Commissioner (in the Apex Scale grade of Chief Secretary/Secretary to Government of India)", org: "Forests, Animal Resources, Agriculture/Horticulture/Watershed Management/State Land Use Board, Planning and Coordination etc Departments, Government of Tripura", desc: "Initially appointed as Principal Secretary Planning and Coordination and prepared the planned budget and special package for SC, ST, Backward classes and Minorities. Ensuring convergence in the management of natural resources for better livelihood of people and forest and environmental conservation in the state. A successful model for rehabilitation of tribal and rural development was created in tune with combating climate change. Initiated reforms in the agriculture and allied sectors (leading to quantum jump in productivity of rice) and completely restructured the forest administration. Took action for improvement of indigenous cows.", color: "#8b5cf6" },
               { year: "2004", period: "15th July 2004 to 4th February 2008", title: "Managing Director, Tripura Forest Development and Plantation Corporation (TFDPC) Ltd & Additional Principal Chief Conservator of Forests and Chief Wildlife Warden & CEO, Tripura JBIC Project & Mission Director, Tripura Rubber Mission", org: "Government of Tripura (Rank of Additional Secretary to Govt. of India)", desc: "Infused corporate culture and turned round the fortune of the loss making company into a viable profit making public enterprise. Successfully settled more than 300 tribal shifting cultivators permanently during the tenure on Rubber Plantations and created employment opportunities for another 6000 people for which the corporation won national award. Successfully set up two National Parks – the Bison National Park and Clouded leopard National Park. Designed and implemented a Rs. 366 crore Japan International Cooperation Agency (JICA) project for Improvement of Forest and Environment and Poverty Reduction. Designed the Indo-German project for integrated natural resources management for the tribal dominated Dhalai District. As Mission Director, Tripura Rubber Mission, prepared an Action Plan for expansion of Rubber in Tripura for the next 20 years. The Rubber has now become the main industrial crop of the State along with Bamboo and is a major source of livelihood to several thousand rural families.", color: "#ef4444" },
               { year: "1993", period: "12th July 1993 to 14th October 1995", title: "Conservator of Forests, Northern Circle, Kumarghat, Tripura and Deputy Chief Wildlife Warden, Tripura", org: "Government of Tripura", desc: "Started a massive movement of involvement of people in forest management through JFM. Busted the gang of international smugglers and in the process escaped an attempt on life on 4th May 1994.", color: "#eab308" },
@@ -274,6 +274,92 @@ export default function LeadershipPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Post-Retirement Professional & Social Work */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-[#52b788] text-sm font-bold uppercase tracking-widest mb-2">Continued Service</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight">Post-Retirement<br />Professional & Social Work</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+              After resigning from his post retirement job in Tripura, Dr Bahuguna fruitfully engaged himself in social and professional work.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden">
+            <div className="p-8 sm:p-12 space-y-6 text-gray-700 leading-relaxed">
+              <div className="space-y-5">
+                <p><strong className="text-[#1b4332]">1.</strong> After resigning from his post retirement job in Tripura Dr Bahuguna fruitfully engaged himself in social and professional work. First of all he became a columnist for the National Newspapers particularly the English Daily Pioneer and so far in various newspapers he had contributed almost 600 Articles of a range of topics from governance to defence to strategic affairs to livelihoods of people to Environment, Forest and Climate Change and Tribal affairs.</p>
+                
+                <p><strong className="text-[#1b4332]">2.</strong> He established the Uttarakhand Jan Vikas Manch in the year 2015 and helped create a federation of Non Govt organizations who worked in the field of rural livelihood.</p>
+                
+                <p><strong className="text-[#1b4332]">3.</strong> In 2018 he took over the not for profit Trust Centre for Resource Management and Environment raised several issues relating to transparent governance on rural livelihood, environment and forest conservation and through his efforts a large number of people got justice. He helped poor through his tweets and taking up matters with govt authorities.</p>
+                
+                <p><strong className="text-[#1b4332]">4.</strong> In the govt sector he was appointed as Member of the Indian Council of Forestry Research and Education (ICFRE) Society in the year 2018 by the Ministry of Environment Forest and Climate Change for a period of 3 years. ICFRE Society is the top policy making body of govt of India relating to Forestry Research Education and Extension and is Chaired by Union Environment Minister.</p>
+                
+                <p><strong className="text-[#1b4332]">5.</strong> The President of India who is the visitor of Central University of Kashmir in February 2019 appointed Dr VK Bahuguna as his representative in the Executive Committee and University Court of Kashmir Central University for a period of 3 years. In this position held helped the nascent central University in initial years to take several decisions.</p>
+                
+                <p><strong className="text-[#1b4332]">6.</strong> Accepted the position of Chairman Kalpvriksh Foundation a dedicated forum created for serving the Indian Cow by Mr Vaishnav Charan Das.</p>
+                
+                <p><strong className="text-[#1b4332]">7.</strong> President of Apni Dharohar Society of Uttarakhand. But resigned after some time to focus on genuine issues at hand relating to Resource Management in the country.</p>
+                
+                <p><strong className="text-[#1b4332]">8.</strong> Was nominated as Member of the Task Force on Tribal Affairs by the Commission on Scheduled Tribe during 2021 to 2023</p>
+                
+                <p><strong className="text-[#1b4332]">9.</strong> Assisted the Vanvasi Kalyan Ashram on assessing the impact of Forest Right Act in Karnataka during the year 2024.</p>
+                
+                <p><strong className="text-[#1b4332]">10.</strong> Chaired a session in Policy issues in the International Conference on Wildlife arranged by Govt of Madhya Pradesh. Apart from this Chaired conference on Disaster management and other issues organized by State Academy of Administration Nainital.</p>
+                
+                <p><strong className="text-[#1b4332]">11.</strong> Has been interacting with officers of Indian Administrative Service (IAS) at the Lal Bahadur Academy of Administration Mussoorie; with Indian Forest Service (IFS) officers and Probationers at the Indira Gandhi Forest Academy Dehradun and Student and Faculty of Indian Institute of Forest Management.</p>
+                
+                <p><strong className="text-[#1b4332]">12.</strong> Organised an International Conference on Climate Change in Asia and Africa during 29th April to 2nd May at Dehradun. It was attended by 76 participants from India, Nepal, Sri Lanka and Mauritius.</p>
+                
+                <p><strong className="text-[#1b4332]">13.</strong> Making frequent visits to Tribal areas of Madhya Pradesh and Tripura and helping them to raise issues relevant for ensuring better livelihood, Environmental Conservation and people centric governance. Several articles helped the authorities to take action on suggested lines.</p>
+                
+                <p><strong className="text-[#1b4332]">14.</strong> He is very active and has shown that without occupying powerful position still a lot can be done. He had Published during Corona lockdown two books. The First one is a compilation of his 99 selective Articles since 2015 till 2021 which can contribute a great deal in accountable and efficiently responsible Governance. The book is entitled: &quot;A Citizens Dream for his country- Making Indian Governance to Work&quot;. The Second Book is: &quot;Quest for Civility - an inside account of Indian Babudom&quot;. Both the books are available online in Amazon, Flipkart and other shops and also with Notion Press publisher Chennai.</p>
+                
+                <p><strong className="text-[#1b4332]">15.</strong> As he deeply live the natural and cultural beauty and Ethos of India and Uttarakhand Dr Bahuguna considering the issue of ecological sustainability of mountains and its people and influx of outsiders leading to population explosion in Uttarakhand he had decided and became the National President of Uttarakhand Samanata Party so that a regional force is created to preserve the concept of Equality. Integrity of Uttarakhand and Help its youth in meeting their genuine needs. He had as President of the party had raised the issue of Delimitation and drug menace and jobs reservation for the youth of Uttarakhand in all private investments.</p>
+              </div>
+
+              {/* Formal Positions Summary */}
+              <div className="mt-12 pt-8 border-t border-gray-100">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">Current & Former Positions Summary</h4>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-4 text-lg">A. Formerly:</h5>
+                    <div className="space-y-3 ml-4">
+                      <p className="text-sm"><strong>1.</strong> Director General Indian Council of Forestry Research and Education (ICFRE) & Chancellor Forest Research Institute (FRI) University Ministry of Environment, Forest and Climate Change Government of India;</p>
+                      <p className="text-sm"><strong>2.</strong> Principal Secretary and Additional Principal Chief Conservator (in Apex Scale) Departments of Agriculture, Horticulture, Forests, Animal Husbandry and Planning and Coordination and Economics Government of Tripura;</p>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h5 className="font-bold text-gray-900 mb-4 text-lg">B. Present:</h5>
+                    <div className="space-y-3 ml-4">
+                      <p className="text-sm"><strong>i)</strong> Chairman, Centre for Resource Management and Environment (a non profit registered Trust);</p>
+                      <p className="text-sm"><strong>ii)</strong> Chairman, Jan Vikas Manch, Uttarakhand (People&apos;s movement for livelihood and transparent governance)</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Address Section */}
+                <div className="mt-8 pt-8 border-t border-gray-100">
+                  <h5 className="font-bold text-gray-900 mb-4 text-lg">Address</h5>
+                  <div className="grid sm:grid-cols-2 gap-6 text-sm text-gray-600">
+                    <div>
+                      <p><strong className="text-gray-900">i) Noida:</strong> A 101, Jagdambe Apartments, C-58/25 Sector 62 NOIDA, UP-201309</p>
+                      <p><strong className="text-gray-900">Telefax:</strong> +91-120-4548664</p>
+                      <p><strong className="text-gray-900">Mobile:</strong> +91-9810405137 & +91-9412057333</p>
+                    </div>
+                    <div>
+                      <p><strong className="text-gray-900">ii) Dehradun:</strong> 281 Phase I Vasant Vihar Dehradun Uttarakhand Pin 248006</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
