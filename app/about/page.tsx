@@ -212,13 +212,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Progress Report Timeline */}
+      {/* CRE Activities Timeline */}
       <section id="progress" className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Progress Report</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">CRE Activities</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Centre for Resource Management and Environment (Formerly known as Foundation for Integrated Resource Management) — Progress Report for the period from the year 2011 to 2023.
+              Centre for Resource Management and Environment (Formerly known as Foundation for Integrated Resource Management) — Activities for the period from the year 2011 to 2023.
             </p>
           </div>
 

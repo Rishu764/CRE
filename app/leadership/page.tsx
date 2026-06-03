@@ -574,19 +574,37 @@ export default function LeadershipPage() {
       {/* Address - WHITE BACKGROUND */}
       <section className="py-12 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl p-6 border border-sky-200 bg-sky-50 flex flex-wrap gap-6 items-center">
-            <MapPin className="w-5 h-5 shrink-0 text-sky-600" />
-            <div>
-              <div className="text-sm font-bold text-gray-900 mb-0.5">Mailing Address</div>
-              <div className="text-sm text-gray-600">A-101 Jagdambe Apartments, C-58/25, Sector-62, Noida, UP – 201309</div>
-            </div>
-            <div>
-              <div className="text-sm font-bold text-gray-900 mb-0.5">Email</div>
-              <div className="text-sm text-sky-600">bahugunaifs@gmail.com</div>
-            </div>
-            <div>
-              <div className="text-sm font-bold text-gray-900 mb-0.5">Mobile</div>
-              <div className="text-sm text-gray-600">9810405137 · 9412057333</div>
+          <div className="rounded-2xl p-6 border border-sky-200 bg-sky-50">
+            <div className="flex flex-wrap gap-8 items-start">
+              <MapPin className="w-5 h-5 shrink-0 text-sky-600 mt-1" />
+
+              {/* Noida Address */}
+              <div>
+                <div className="text-xs font-bold text-sky-600 uppercase tracking-wide mb-1">Noida Office</div>
+                <div className="text-sm font-bold text-gray-900 mb-0.5">Mailing Address</div>
+                <div className="text-sm text-gray-600">A-101 Jagdambe Apartments, C-58/25<br />Sector-62, Noida, UP – 201309</div>
+                <div className="text-sm text-gray-500 mt-1">Telefax: +91-120-4548664</div>
+                <div className="text-sm text-gray-500">Mobile: +91-9810405137 &amp; +91-9412057333</div>
+              </div>
+
+              <div className="w-px self-stretch bg-sky-200 hidden sm:block" />
+
+              {/* Dehradun Address */}
+              <div>
+                <div className="text-xs font-bold text-sky-600 uppercase tracking-wide mb-1">Dehradun Office</div>
+                <div className="text-sm font-bold text-gray-900 mb-0.5">Residence Address</div>
+                <div className="text-sm text-gray-600">281 Phase I, Vasant Vihar<br />Dehradun, Uttarakhand – 248006</div>
+                <div className="text-sm text-gray-500 mt-1">Mobile: +91-9810405137 &amp; +91-9412057333</div>
+              </div>
+
+              <div className="w-px self-stretch bg-sky-200 hidden sm:block" />
+
+              {/* Contact */}
+              <div>
+                <div className="text-xs font-bold text-sky-600 uppercase tracking-wide mb-1">Contact</div>
+                <div className="text-sm font-bold text-gray-900 mb-0.5">Email</div>
+                <div className="text-sm text-sky-600">bahugunaifs@gmail.com</div>
+              </div>
             </div>
           </div>
         </div>
