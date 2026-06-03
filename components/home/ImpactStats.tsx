@@ -12,6 +12,7 @@ const stats = [
     number: "Queen's Award",
     label: "For Forestry (Year 2000)",
     sublabel: "Commonwealth Forestry Association, UK",
+    gold: true,
   },
   {
     icon: Globe2,
@@ -29,51 +30,64 @@ const stats = [
 
 export default function ImpactStats() {
   return (
-    <section
-      className="py-20 lg:py-24 relative overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #52b788 100%)",
-      }}
-    >
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full blur-3xl" style={{ background: "#e9c46a" }} />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 lg:py-24 bg-[#0f2318]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
-            Our Impact in Numbers
-          </h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            Measurable change through sustained advocacy, community engagement,
-            and policy influence.
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
+          <div>
+            <p className="text-[#52b788] text-xs font-bold uppercase tracking-widest mb-3">
+              Measurable Change
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
+              Our Impact in Numbers
+            </h2>
+          </div>
+          <p className="text-white/40 text-sm max-w-xs leading-relaxed">
+            Sustained advocacy, community engagement, and policy influence — tracked over decades.
           </p>
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat) => (
+        {/* Stats — column divider layout */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+          {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className="backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 transition-colors"
-              style={{ background: "rgba(255,255,255,0.1)" }}
+              className={`py-8 sm:py-0 sm:px-8 group ${i === 0 ? "sm:pl-0" : ""} ${i === stats.length - 1 ? "sm:pr-0" : ""}`}
             >
+              {/* Icon */}
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
-                style={{ background: "rgba(255,255,255,0.2)" }}
+                className="w-10 h-10 rounded-lg flex items-center justify-center mb-5"
+                style={{ background: stat.gold ? "rgba(233,196,106,0.12)" : "rgba(82,183,136,0.12)" }}
               >
-                <stat.icon className="w-6 h-6" style={{ color: "#e9c46a" }} />
+                <stat.icon
+                  className="w-5 h-5"
+                  style={{ color: stat.gold ? "#e9c46a" : "#52b788" }}
+                />
               </div>
-              <div className="text-2xl lg:text-3xl font-bold text-white mb-1">
+
+              {/* Number */}
+              <div
+                className="text-2xl lg:text-3xl font-black mb-2 leading-none"
+                style={{ color: stat.gold ? "#e9c46a" : "#52b788" }}
+              >
                 {stat.number}
               </div>
-              <div className="text-sm font-medium text-white/90 mb-1">
+
+              {/* Label */}
+              <div className="text-sm font-semibold text-white/80 mb-1 leading-snug">
                 {stat.label}
               </div>
-              <div className="text-xs text-white/60">{stat.sublabel}</div>
+
+              {/* Sublabel */}
+              <div className="text-xs text-white/35 leading-relaxed">
+                {stat.sublabel}
+              </div>
+
+              {/* Hover underline */}
+              <div
+                className="mt-5 h-px w-0 group-hover:w-full transition-all duration-500"
+                style={{ background: stat.gold ? "#e9c46a" : "#52b788" }}
+              />
             </div>
           ))}
         </div>

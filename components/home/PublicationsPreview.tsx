@@ -36,7 +36,7 @@ export default function PublicationsPreview() {
           {/* Left - Header */}
           <div className="lg:col-span-1 space-y-6">
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Publications & Media
+              Publications &amp; Media
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
               Thought Leadership Through Writing
@@ -108,7 +108,7 @@ export default function PublicationsPreview() {
             </div>
 
             {/* Pioneer Newspaper Banner */}
-            <div className="mt-6 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-6 border border-primary/10">
+            <div className="mt-6 bg-primary/5 rounded-2xl p-6 border border-primary/10">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
                   <Newspaper className="w-6 h-6 text-primary" />
@@ -119,7 +119,7 @@ export default function PublicationsPreview() {
                   </h4>
                   <p className="text-xs text-text-muted">
                     Published from Delhi, Bhopal, Lucknow, Bhubaneswar, Ranchi,
-                    Raipur, Chandigarh, Dehradun, Hyderabad & Vijayawada
+                    Raipur, Chandigarh, Dehradun, Hyderabad &amp; Vijayawada
                   </p>
                 </div>
               </div>
