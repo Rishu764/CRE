@@ -1,5 +1,6 @@
 "use client";
-import { Globe2, BookOpen, MapPin } from "lucide-react";
+import { Globe2, BookOpen, MapPin, ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 
 const visits = [
   { no: 1,  flag: "🇦🇺", country: "Australia",           year: "2013",    img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80", desc: "Visited Australia as Head of the Delegation to inspect various mining areas, industry and Minerals Council of Australia from 02.03.2013 to 11.03.2013 in order to have bilateral cooperation on sustainable and environmentally sustainable mining." },
@@ -34,9 +35,28 @@ const visits = [
   { no: 30, flag: "🇬🇧", country: "UK (M.Sc.)",           year: "1987–88", img: "https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?w=600&q=80", desc: "Visited United Kingdom of Great Britain under Colombo Plan for a period of one year (from 10.9.1987 to 10.10.1988) to attend the M.Sc (Resource Management) course at the University of Edinburgh. Studied the Scotch Industry, forest Industries, eco-tourism, sports and resource management centers of UK, France, Belgium and Netherlands." },
 ];
 
+const INITIAL_COUNT = 10;
+const LOAD_MORE_COUNT = 10;
+
 export default function InternationalExposure() {
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
+
+  const visibleVisits = visits.slice(0, visibleCount);
+  const hasMore = visibleCount < visits.length;
+  const remaining = visits.length - visibleCount;
+
+  function handleShowMore() {
+    setVisibleCount((prev) => Math.min(prev + LOAD_MORE_COUNT, visits.length));
+  }
+
+  function handleShowLess() {
+    setVisibleCount(INITIAL_COUNT);
+    // Scroll back to section top for better UX
+    document.getElementById("international-exposure")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   return (
-    <section className="py-20" style={{ background: "#f8fafc" }}>
+    <section id="international-exposure" className="py-20" style={{ background: "#f8fafc" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -56,16 +76,36 @@ export default function InternationalExposure() {
               </div>
             ))}
           </div>
+
+          {/* Progress indicator */}
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <div className="w-48 h-1.5 rounded-full bg-gray-200 overflow-hidden">
+              <div
+                className="h-full rounded-full bg-sky-400 transition-all duration-500"
+                style={{ width: `${(visibleCount / visits.length) * 100}%` }}
+              />
+            </div>
+            <p className="text-xs text-gray-400">
+              Showing <span className="font-semibold text-gray-600">{visibleCount}</span> of <span className="font-semibold text-gray-600">{visits.length}</span> visits
+            </p>
+          </div>
         </div>
 
         {/* Cards Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visits.map((v) => (
-            <div key={v.no} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          {visibleVisits.map((v, index) => (
+            <div
+              key={v.no}
+              className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+              style={{
+                animationDelay: `${(index % LOAD_MORE_COUNT) * 40}ms`,
+                animation: index >= visibleCount - LOAD_MORE_COUNT ? "fadeSlideIn 0.35s ease both" : undefined,
+              }}
+            >
               {/* Image banner */}
               <div className="relative h-40 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={v.img} alt={v.country} className="w-full h-full object-cover" />
+                <img src={v.img} alt={v.country} className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }} />
                 {/* Number badge */}
                 <div className="absolute top-3 left-3 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: "#0ea5e9" }}>
@@ -94,6 +134,32 @@ export default function InternationalExposure() {
           ))}
         </div>
 
+        {/* Show More / Show Less buttons */}
+        <div className="mt-10 flex flex-col items-center gap-3">
+          {hasMore && (
+            <button
+              onClick={handleShowMore}
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-lg border border-gray-300 bg-white text-sm font-medium text-gray-600 hover:border-sky-400 hover:text-sky-600 hover:bg-sky-50 transition-all duration-200 shadow-sm"
+            >
+              <ChevronDown className="w-4 h-4" />
+              Show {Math.min(remaining, LOAD_MORE_COUNT)} more
+              <span className="ml-1 px-1.5 py-0.5 rounded text-[11px] font-semibold bg-gray-100 text-gray-500">
+                {remaining} left
+              </span>
+            </button>
+          )}
+
+          {visibleCount > INITIAL_COUNT && (
+            <button
+              onClick={handleShowLess}
+              className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <ChevronUp className="w-3.5 h-3.5" />
+              Show less
+            </button>
+          )}
+        </div>
+
         {/* Publication note */}
         <div className="mt-12 rounded-2xl p-6 border border-sky-200 bg-sky-50 flex items-start gap-4">
           <BookOpen className="w-5 h-5 shrink-0 mt-0.5 text-sky-600" />
@@ -102,6 +168,14 @@ export default function InternationalExposure() {
           </p>
         </div>
       </div>
+
+      {/* Keyframe animation for newly revealed cards */}
+      <style>{`
+        @keyframes fadeSlideIn {
+          from { opacity: 0; transform: translateY(16px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </section>
   );
 }
