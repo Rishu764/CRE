@@ -81,8 +81,8 @@ export default function LeadershipPage() {
               <div className="space-y-3">
                 {[
                   { title: "Chairman, Centre for Resource Management & Environment (CRE)", desc: "Raises people-centric nationally important issues on environment, agriculture, planning, eco-tourism, tribal & rural development, governance, nationalism and livelihood. Writes regular columns in national newspapers." },
-                  { title: "Member, Indian Council of Forestry Research and Education (ICFRE) Society (since June 2018)", desc: "Nominated as Member of the Indian Council of Forestry Research and Education Society — the Apex policy making body of this autonomous institution under Ministry of Environment, Forest & Climate Change, chaired by the Minister." },
-                  { title: "Presidential Nominee — Central University of Kashmir (since Feb 2019)", desc: "Appointed by the President of India as his nominee in the Executive Council and University Court of Central University of Kashmir." },
+                  { title: "Member, Indian Council of Forestry Research and Education (ICFRE) Society (June 2018 – 2021)", desc: "Nominated for 3 years as Member of the Indian Council of Forestry Research and Education Society — the Apex policy making body of this autonomous institution under Ministry of Environment, Forest & Climate Change, chaired by the Minister." },
+                  { title: "Presidential Nominee — Central University of Kashmir (Feb 2019 – 2022)", desc: "Appointed for 3 years by the President of India as his nominee in the Executive Council and University Court of Central University of Kashmir." },
                   { title: "Chairman, Kalpavriksh Foundation", desc: "A Trust dedicated to serving the Indian Cow and Cow products with a network of 75,000 cows." },
                 ].map(p => (
                   <div key={p.title} className="rounded-xl p-4 border-l-4 border-l-[#52b788] bg-white/[0.02] border border-[#2d6a4f]/20">
@@ -565,6 +565,216 @@ export default function LeadershipPage() {
 
                 {/* Top-right dot indicator */}
                 <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-sky-400 opacity-70" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Other Trustees */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-[#52b788] uppercase tracking-wide">The Team</span>
+            <h2 className="text-3xl font-black text-gray-900 mt-2 mb-3">Board of Trustees</h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-sm">
+              CRE is guided by eminent trustees drawn from the Indian Forest Service, environmental activism, law and social work.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            {/* Dr. V.K. Bahuguna — Chairman */}
+            <div className="bg-gradient-to-br from-[#f0faf5] to-white rounded-2xl p-5 border border-[#52b788]/20 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl overflow-hidden ring-2 ring-[#52b788]/30">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/author.png" alt="Dr. V.K. Bahuguna" className="w-full h-full object-cover object-top" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Dr. V.K. Bahuguna</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Chairman, CRE</p>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#52b788]/10 text-[#1b4332]">IFS · 1979 Batch</span>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Former Director General, ICFRE & Chancellor, FRI Deemed University. Winner of the Queen&apos;s Award for Forestry (2000).
+                </p>
+              </div>
+            </div>
+
+            {/* Mrs. Usha Bahuguna */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl overflow-hidden ring-2 ring-[#52b788]/20">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/Mrs. Usha Bahuguna.jpg" alt="Mrs. Usha Bahuguna" className="w-full h-full object-cover object-top" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Mrs. Usha Bahuguna</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee & Former Chairperson</p>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Former Chairperson of the Foundation for Resource Management. Spearheaded tribal artisan training and livelihood programmes for women self-help groups across Uttarakhand and Tripura.
+                </p>
+              </div>
+            </div>
+
+            {/* Yogesh */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Yogesh</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Active environmentalist based in Delhi, working on conservation and environmental advocacy.
+                </p>
+              </div>
+            </div>
+
+            {/* Surender */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Surender</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#52b788]/10 text-[#1b4332]">IFS · 1985 Batch · Tripura Cadre</span>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Former Principal Chief Conservator of Forests, Tripura. Also served as Secretary, Environment & Science and Technology, Govt. of Tripura. Now practising as an advocate at the Delhi High Court.
+                </p>
+              </div>
+            </div>
+
+            {/* Sudheer */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Sudheer</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Details to be updated.
+                </p>
+              </div>
+            </div>
+
+            {/* Viney — IFS Karnataka */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Viney (Mr. Luthra)</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#52b788]/10 text-[#1b4332]">IFS · 1979 Batch · Karnataka Cadre</span>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Retired as Principal Chief Conservator of Forests & Head of Forest Force, Govt. of Karnataka. Outstanding consultant in eco-tourism; served for a long time as MD of Karnataka Tourism Corporation.
+                </p>
+              </div>
+            </div>
+
+            {/* Mrs. Srishti */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Mrs. Srishti</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#52b788]/10 text-[#1b4332]">M.Sc. Forestry · FRI Deemed University</span>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Young social worker and environmentalist with a Master's in Forestry from the Forest Research Institute (FRI) Deemed University, Dehradun.
+                </p>
+              </div>
+            </div>
+
+            {/* M.H. Swaminath */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">M.H. Swaminath</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#52b788]/10 text-[#1b4332]">IFS · 1979 Batch · Karnataka Cadre</span>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Retired as Principal Conservator of Forests, Karnataka. Also served as Secretary (Forests), Govt. of Karnataka.
+                </p>
+              </div>
+            </div>
+
+            {/* A.N. Paradkar */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">A.N. Paradkar</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#52b788]/10 text-[#1b4332]">IFS · 1979 Batch · Jharkhand Cadre</span>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Retired as Principal Chief Conservator of Wildlife, Jharkhand.
+                </p>
+              </div>
+            </div>
+
+            {/* Sundar Pal */}
+            <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 flex gap-4 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-14 h-14 rounded-xl bg-[#52b788]/10 flex items-center justify-center ring-2 ring-[#52b788]/20">
+                <Users className="w-6 h-6 text-[#52b788]" />
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-sm">Sundar Pal</h3>
+                <p className="text-xs text-[#52b788] font-semibold mt-0.5">Trustee, CRE</p>
+                <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#52b788]/10 text-[#1b4332]">IFS · 1979 Batch · MP Cadre</span>
+                <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                  Retired as Principal Chief Conservator of Forests, Madhya Pradesh. Also served as Member, Environment, Narmada Authority.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="py-16 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-[#52b788] uppercase tracking-wide">Gallery</span>
+            <h2 className="text-3xl font-black text-gray-900 mt-2 mb-3">Photos</h2>
+            <p className="text-gray-500 max-w-xl mx-auto text-sm">
+              Moments from fieldwork, meetings, conferences and community engagements.
+            </p>
+          </div>
+
+          <div className="columns-2 sm:columns-3 lg:columns-4 gap-3 space-y-3">
+            {[
+              { src: "/vk_bahuguna_speech.png", caption: "Dr. V.K. Bahuguna addressing a conference" },
+              { src: "/meeting.png", caption: "Community meeting" },
+              { src: "/meeting02.png", caption: "Policy discussions" },
+              { src: "/meeting03.png", caption: "Stakeholder engagement" },
+              { src: "/meeting_uk_agriculture_minister.png", caption: "With Uttarakhand Agriculture Minister, 2017" },
+              { src: "/amity.png", caption: "Amity University event" },
+              { src: "/dg_uk.png", caption: "DG UK engagement" },
+              { src: "/villagers.png", caption: "Village outreach" },
+              { src: "/villagers_02.png", caption: "Tribal community visit" },
+              { src: "/villagers_03.png", caption: "Rural development visit" },
+              { src: "/mushroom_growers.png", caption: "Meeting mushroom growers, 2018" },
+              { src: "/author02.png", caption: "Dr. V.K. Bahuguna" },
+            ].map((photo, i) => (
+              <div key={i} className="break-inside-avoid rounded-xl overflow-hidden group relative shadow-sm hover:shadow-lg transition-shadow">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={photo.src}
+                  alt={photo.caption}
+                  className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end">
+                  <p className="w-full px-3 py-2 text-white text-xs font-medium translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    {photo.caption}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
