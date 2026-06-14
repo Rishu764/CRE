@@ -19,7 +19,7 @@ const issues = [
     icon: BookOpen,
     title: "Resource Management in Accountable Administration",
     description:
-      "Inforcing the concept of resource management within accountable governance frameworks to ensure sustainable and transparent use of natural and public resources.",
+      "Enforcing the concept of resource management within accountable governance frameworks to ensure sustainable and transparent use of natural and public resources.",
     number: "01",
   },
   {
