@@ -9,6 +9,7 @@ import PublicationsPreview from "@/components/home/PublicationsPreview";
 import CTASection from "@/components/home/CTASection";
 
 export default function Home() {
+  console.log("Rendering Home Page");
   return (
     <>
       <HeroSection />
