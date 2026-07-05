@@ -37,6 +37,7 @@ export default function Footer() {
                 { href: "/our-work", label: "Our Work" },
                 { href: "/leadership", label: "Leadership" },
                 { href: "/publications", label: "Publications" },
+                { href: "/articles", label: "Articles" },
                 { href: "/gallery", label: "Gallery" },
               ].map((link) => (
                 <li key={link.href}>
