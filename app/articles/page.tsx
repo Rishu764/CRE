@@ -10,6 +10,18 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "tiger-conservation-challenges",
+    title: "भारत में बाघ संरक्षण की नई चुनौतियां — New Challenges in Tiger Conservation",
+    excerpt:
+      "India is home to 70% of the world's wild tigers. But rising tiger density, habitat fragmentation, and climate change now demand a new strategy. By Dr. V.K. Bahuguna.",
+    author: "Dr. V.K. Bahuguna",
+    date: "30 July 2026",
+    category: "Wildlife Conservation",
+    externalUrl: "https://indiavistar.com/bharat-mein-bagh-sanrakshan-chunautiyan/",
+    externalSource: "IndiaVistar.com",
+    featured: true,
+  },
+  {
     slug: "vk-bahuguna-samata-party-resignation",
     title: "Dr. VK Bahuguna Resigns as President of Uttarakhand Samata Party",
     excerpt:
@@ -20,7 +32,7 @@ const articles = [
     externalUrl:
       "https://roshangaur.com/2026/07/08/dr-vk-bahuguna-resigned-as-uttarakhand-samata-party/",
     externalSource: "RoshanGaur.com",
-    featured: true,
+    featured: false,
   },
   {
     slug: "vk-bahuguna-portrait",
