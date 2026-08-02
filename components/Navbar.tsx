@@ -9,11 +9,16 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/leadership", label: "Leadership" },
   { href: "/about", label: "About Us" },
-  { href: "/articles", label: "Articles" },
   { href: "/key-issues", label: "Key Issues" },
   { href: "/our-work", label: "Our Work" },
+  { href: "/articles", label: "Articles" },
+  { href: "/media", label: "Media" },
   { href: "/publications", label: "Publications" },
   { href: "/gallery", label: "Gallery" },
+];
+
+// Contact is accessible via the "Get Involved" CTA button — kept in mobile menu only
+const mobileOnlyLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
@@ -51,12 +56,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-0.5">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 text-sm font-medium rounded-lg transition-all ${
+                className={`px-2.5 py-1.5 text-[13px] font-medium rounded-lg transition-all whitespace-nowrap ${
                   isActive(link.href)
                     ? "text-primary bg-primary/10 font-semibold"
                     : "text-gray-700 hover:text-primary hover:bg-primary/5"
@@ -96,7 +101,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="lg:hidden bg-white border-t border-muted-dark">
           <nav className="max-w-7xl mx-auto px-4 py-4 space-y-1">
-            {navLinks.map((link) => (
+            {[...navLinks, ...mobileOnlyLinks].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

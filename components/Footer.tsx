@@ -38,6 +38,7 @@ export default function Footer() {
                 { href: "/leadership", label: "Leadership" },
                 { href: "/publications", label: "Publications" },
                 { href: "/articles", label: "Articles" },
+                { href: "/media", label: "Media" },
                 { href: "/gallery", label: "Gallery" },
               ].map((link) => (
                 <li key={link.href}>
