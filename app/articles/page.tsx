@@ -11,24 +11,24 @@ export const metadata: Metadata = {
 const articles = [
   {
     slug: "tiger-conservation-challenges",
-    title: "भारत में बाघ संरक्षण की नई चुनौतियां — New Challenges in Tiger Conservation",
+    title: "भारत में बाघ संरक्षण की नई चुनौतियां: सफलता के बाद अब भविष्य की सबसे बड़ी परीक्षा",
     excerpt:
-      "India is home to 70% of the world's wild tigers. But rising tiger density, habitat fragmentation, and climate change now demand a new strategy. By Dr. V.K. Bahuguna.",
-    author: "Dr. V.K. Bahuguna",
-    date: "30 July 2026",
-    category: "Wildlife Conservation",
+      "भारत आज दुनिया के लगभग 70 प्रतिशत जंगली बाघों का घर है। लेकिन बढ़ते घनत्व, खंडित आवास और जलवायु परिवर्तन के बीच अब संख्या से परे एक नई रणनीति की जरूरत है।",
+    author: "डॉ. वी.के. बहुगुणा",
+    date: "30 जुलाई 2026",
+    category: "वन्यजीव संरक्षण",
     externalUrl: "https://indiavistar.com/bharat-mein-bagh-sanrakshan-chunautiyan/",
     externalSource: "IndiaVistar.com",
     featured: true,
   },
   {
     slug: "vk-bahuguna-samata-party-resignation",
-    title: "Dr. VK Bahuguna Resigns as President of Uttarakhand Samata Party",
+    title: "उत्तराखंड समता पार्टी के अध्यक्ष डॉ. वीके बहुगुणा का इस्तीफा",
     excerpt:
-      "Ahead of Uttarakhand Assembly elections, Dr. Bahuguna stepped down citing organisational weaknesses — reaffirming his continued commitment to CRE and Jan Vikas Manch.",
+      "विधानसभा चुनाव से ठीक पहले राज्य की क्षेत्रीय राजनीति में बड़ा घटनाक्रम — डॉ. बहुगुणा ने पद छोड़ा, लेकिन CRE व जन विकास मंच के माध्यम से सेवा जारी रखने का संकल्प दोहराया।",
     author: "Roshan Gaur",
-    date: "8 July 2026",
-    category: "Leadership Update",
+    date: "8 जुलाई 2026",
+    category: "नेतृत्व अपडेट",
     externalUrl:
       "https://roshangaur.com/2026/07/08/dr-vk-bahuguna-resigned-as-uttarakhand-samata-party/",
     externalSource: "RoshanGaur.com",
