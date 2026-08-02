@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "vk-bahuguna-samata-party-resignation",
+    title: "Dr. VK Bahuguna Resigns as President of Uttarakhand Samata Party",
+    excerpt:
+      "Ahead of Uttarakhand Assembly elections, Dr. Bahuguna stepped down citing organisational weaknesses — reaffirming his continued commitment to CRE and Jan Vikas Manch.",
+    author: "Roshan Gaur",
+    date: "8 July 2026",
+    category: "Leadership Update",
+    externalUrl:
+      "https://roshangaur.com/2026/07/08/dr-vk-bahuguna-resigned-as-uttarakhand-samata-party/",
+    externalSource: "RoshanGaur.com",
+    featured: true,
+  },
+  {
     slug: "vk-bahuguna-portrait",
     title: "The Last Word in Forestry: A Portrait of VK Bahuguna",
     excerpt:
@@ -20,7 +33,7 @@ const articles = [
     externalUrl:
       "https://tripurainfo.com/TripuraArticle/TRIPURAINFO-English-Article-By-Biswanath-Bhattacharya-283-27-06-2026-283.html",
     externalSource: "TripuraInfo",
-    featured: true,
+    featured: false,
   },
 ];
 
