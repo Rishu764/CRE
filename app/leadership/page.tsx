@@ -1,4 +1,4 @@
-import { Trophy, Globe2, BookOpen, GraduationCap, Briefcase, MapPin, Star, Award, Users, Mic2, Mountain, Flag, Gem, Medal, ScrollText, Newspaper, Crown } from "lucide-react";
+import { Trophy, Globe2, GraduationCap, Briefcase, Star, Award, Users, Mic2, Mountain, Flag, Gem, Medal, ScrollText, Newspaper, Crown, Scale, MapPin } from "lucide-react";
 import InternationalExposure from "@/components/InternationalExposure";
 
 export default function LeadershipPage() {
@@ -32,8 +32,21 @@ export default function LeadershipPage() {
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
                 <Star className="w-3 h-3 text-[#52b788]" />Leadership Profile
               </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-3">Dr. V.K. Bahuguna</h1>
-              <p className="text-base lg:text-lg text-emerald-300/80 max-w-3xl leading-relaxed">
+              <div className="flex flex-wrap items-center gap-3 mb-3">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white">Dr. V.K. Bahuguna</h1>
+                <a
+                  href="https://in.linkedin.com/in/bahuguna-vk-39b46350"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
+                  className="shrink-0 w-9 h-9 rounded-lg bg-[#0077b5]/20 border border-[#0077b5]/40 flex items-center justify-center hover:bg-[#0077b5] transition-colors group"
+                >
+                  <svg className="w-4 h-4 text-[#0077b5] group-hover:text-white transition-colors fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+              <p className="text-base lg:text-lg text-emerald-300/80 max-w-3xl leading-relaxed mb-3">
                 Indian Forest Service (IFS) (Retd.) · 1979 Batch · Former Director General, Indian Council of Forestry Research & Education (ICFRE) & Chancellor, Forest Research Institute (FRI) Deemed University
               </p>
 
@@ -379,7 +392,7 @@ export default function LeadershipPage() {
                 <Trophy className="w-6 h-6 text-white" />
               </div>
               <div>
-                <div className="text-3xl font-black text-[#1b4332]">15</div>
+                <div className="text-3xl font-black text-[#1b4332]">17</div>
                 <div className="text-xs text-gray-400 font-medium">Recognitions</div>
               </div>
             </div>
@@ -459,6 +472,8 @@ export default function LeadershipPage() {
               { icon: <Crown className="w-5 h-5" />, year: "1975", title: "1st Position — M.Sc. Zoology", desc: "A class prize for securing first position in the University in M.Sc. (Zoology) examination (1975) of the Garhwal University, Srinagar (Garhwal), UP." },
               { icon: <Award className="w-5 h-5" />, year: "1981", title: "R.S. Mathur Prize", desc: "R. S. Mathur Prize in the final examination of 1979-1981 course of Associate of Indian Forest College (AIFC), at the Indian Forest College, Dehra Dun." },
               { icon: <Newspaper className="w-5 h-5" />, year: "1986–89", title: "Seth Memorial & Brandis Memorial Prizes", desc: "Awarded Seth Memorial (during 1986 & 1989) and Brandis Memorial Prizes (during 1987 & 1989) for writing best research papers/photography for the respective years in the Journal 'Indian Forester'." },
+              { icon: <Scale className="w-5 h-5" />, year: "–", title: "Court Commissioner — Madras High Court", desc: "Appointed as Court Commissioner by the Madras High Court to assess Red Sanders tree compensation in a major land acquisition dispute — a recognition of his deep technical expertise in forestry valuation." },
+              { icon: <Globe2 className="w-5 h-5" />, year: "2011–13", title: "Governing Council — Commonwealth Forestry Association (CFA)", desc: "Served on the Governing Council of the Commonwealth Forestry Association (CFA), representing developing-nation perspectives in global talks on carbon trade, international timber laws, and global forest governance." },
             ].map((a, i) => (
               <div key={a.title}
                 className={`group flex items-start gap-5 p-6 border-b-2 border-gray-100 hover:bg-[#f0faf5] transition-colors ${i % 2 === 0 ? "sm:border-r-2" : ""}`}>
