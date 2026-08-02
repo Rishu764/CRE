@@ -1,5 +1,6 @@
 import { Trophy, Globe2, GraduationCap, Briefcase, Star, Award, Users, Mic2, Mountain, Flag, Gem, Medal, ScrollText, Newspaper, Crown, Scale, MapPin } from "lucide-react";
 import InternationalExposure from "@/components/InternationalExposure";
+import ExpertiseAccordion from "@/components/leadership/ExpertiseAccordion";
 
 export default function LeadershipPage() {
   return (
@@ -375,6 +376,20 @@ export default function LeadershipPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ── Areas of Expertise & Policy Positions ── */}
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-4">
+            <p className="text-[#52b788] text-sm font-bold uppercase tracking-widest mb-2">Research, Reform &amp; Policy</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight">Areas of Expertise</h2>
+            <p className="text-gray-500 mt-3 max-w-2xl text-base">
+              Dr. Bahuguna&apos;s work spans advanced forestry research, institutional reform advocacy, environmental legislation, and international diplomacy.
+            </p>
+          </div>
+        </div>
+        <ExpertiseAccordion />
       </section>
 
       {/* Awards */}
